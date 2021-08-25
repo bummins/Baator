@@ -1,0 +1,81 @@
+TerrainBiomeLookupTable:
+  # keys to remove from in-memory structure when this file is loaded
+  remove: [] 
+  # elements to add from in-memory structure when this file is loaded
+  add:
+    Basic:
+      - content: Dirt
+        bandSize: 0.01
+        overrides:
+          diseaseOverride: SlimeLung
+          diseaseAmountOverride: 1000000
+      - content: Algae
+        bandSize: 0.05
+      - content: ToxicSand
+        bandSize: 0.05
+      - content: SlimeMold
+        bandSize: 0.03
+        overrides:
+          diseaseOverride: SlimeLung
+          diseaseAmountOverride: 1000000
+      - content: Mud
+        bandSize: 0.08
+      - content: SlimeMold
+        bandSize: 0.03
+        overrides:
+          diseaseOverride: SlimeLung
+          diseaseAmountOverride: 1000000
+#      - content: DirtyWater
+#        bandSize: 0.1
+      - content: ContaminatedOxygen
+        bandSize: 0.7
+        overrides:
+          massMultiplier: 7.5
+          diseaseOverride: SlimeLung
+          diseaseAmountOverride: 1000000
+    Toxicmetal:
+      - content: SlimeMold
+        bandSize: 0.02
+        overrides:
+          diseaseOverride: SlimeLung
+          diseaseAmountOverride: 1000000
+      - content: Lead
+        bandSize: 0.01
+        overrides:
+          massMultiplier: 4.9
+      - content: ToxicSand
+        bandSize: 0.15
+      - content: Lead
+        bandSize: 0.1
+        overrides:
+          massMultiplier: 3.1
+      - content: ToxicMud
+        bandSize: 0.04
+      - content: ToxicSand
+        bandSize: 0.03
+      - content: ContaminatedOxygen
+        bandSize: 0.4
+        overrides:
+          massMultiplier: 9.5
+          diseaseOverride: SlimeLung
+          diseaseAmountOverride: 1000000
+    Swamp:
+      - content: SlimeMold
+        bandSize: 0.02
+        overrides:
+          diseaseOverride: SlimeLung
+          diseaseAmountOverride: 1000000
+      - content: SedimentaryRock
+        bandSize: 0.05
+        overrides:
+          massMultiplier: 5.5
+      - content: ToxicSand
+        bandSize: 0.15
+      - content: Mud
+        bandSize: 0.2
+      - content: ToxicMud
+        bandSize: 0.35
+      - content: Fertilizer
+        bandSize: 0.05
+      - content: CarbonDioxide
+        bandSize: 0.4

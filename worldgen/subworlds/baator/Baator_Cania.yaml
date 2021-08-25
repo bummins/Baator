@@ -1,0 +1,52 @@
+biomeNoise: noise/Baator_Cania
+temperatureRange: CaniaCold
+pdWeight: 4.0
+minChildCount: 12
+extraBiomeChildren: 7
+density:
+  min: 15
+  max: 20
+avoidRadius: 15.0
+sampleBehaviour: PoissonDisk
+biomes:
+  - name: biomes/Baator_Cania/Core
+    weight: 1
+    tags:
+      - ColdWheat
+      - ColdWheatSeed
+      - ColdBreather
+  - name: biomes/Baator_Cania/MetalicIce
+    weight: 1
+    tags:
+      - ColdWheat
+      - ColdWheatSeed
+      - ColdBreather
+tags:
+  - IgnoreCaveOverride
+features:
+  - type: features/baator/Baator_Cania_oxygenpool
+#  - type: features/baator/Baator_Cania_causticpool
+#  - type: features/baator/Baator_Cania_carbonpool
+  - type: features/baator/Baator_Cania_carbonbomb
+#  - type: expansion1::features/frozen/SlushPool
+#  - type: expansion1::features/frozen/SlushPool
+#  - type: expansion1::features/frozen/SaltShelf
+#  - type: expansion1::features/frozen/SaltShelf
+#  - type: expansion1::features/frozen/RustShelf
+#  - type: expansion1::features/frozen/RustShelf
+
+#Moved to worldgen Globalrules
+#subworldTemplateRules:
+#  - names:
+#    - expansion1::poi/poi_geyser_dirty_slush
+#    - expansion1::poi/poi_frozen_salt_water_geyser
+#    listRule: GuaranteeAll
+#    priority: 100
+#    allowedCellsFilter:
+##      - command: IntersectWith
+#      - command: Replace
+#        tagcommand: DistanceFromTag
+#        tag: AtStart
+#        minDistance: 1
+#        maxDistance: 2
+zoneType: FrozenWastes

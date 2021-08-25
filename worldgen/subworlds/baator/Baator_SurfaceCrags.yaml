@@ -1,0 +1,23 @@
+biomeNoise: noise/subworldFrozen
+temperatureRange: VeryCold
+pdWeight: 5.75
+minChildCount: 1
+borderOverride: Baator_Surface
+density:
+  min: 70
+  max: 70
+avoidRadius: 25.0
+sampleBehaviour: PoissonDisk
+biomes:
+  - name: biomes/Misc/Surface
+    weight: 1
+    tags:
+      - Mole
+#    overrides: #Not supported
+#      massMultiplier: 50
+tags:
+  - IgnoreCaveOverride
+  - ErodePointToBorderInv
+# - ErodePointToWorldTop
+  - NoGlobalFeatureSpawning
+zoneType: Space

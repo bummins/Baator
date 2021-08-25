@@ -1,0 +1,27 @@
+tags:
+  - AllowExceedNodeBorders
+shape: Splat
+borders:
+blobSize:
+  min: 3
+  max: 6
+ElementChoiceGroups:
+  RoomCenterElements:
+    selectionMethod: PickOneWeighted
+    choices:
+      - element: Algae
+        weight: 150
+        overrides:
+          temperatureOverride: 373
+      - element: Mud
+        weight: 150
+        overrides:
+          temperatureOverride: 373
+      - element: SlimeMold
+        weight: 150
+        overrides:
+          temperatureOverride: 373
+      - element: ToxicMud
+        weight: 150
+        overrides:
+          temperatureOverride: 373

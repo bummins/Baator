@@ -1,0 +1,38 @@
+tags:
+  - AllowExceedNodeBorders
+shape: ShortWide
+borders:
+  - 1
+  - 2
+blobSize:
+  min: 3
+  max: 8
+# internalMobs:
+#   - type: MushroomSeed
+#     count:
+#       min: 2
+#       max: 4
+ElementChoiceGroups:
+  RoomCenterElements:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Steam
+        weight: 1       
+        overrides:
+          massOverride: 2500
+      - element: Mercury
+        weight: 0.2
+        overrides:
+          massOverride: 9.6
+  RoomBorderChoices0:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Wolframite
+        weight: 0.5      
+  RoomBorderChoices1:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Electrum
+        weight: 0.5     
+      - element: Glass
+        weight: 1

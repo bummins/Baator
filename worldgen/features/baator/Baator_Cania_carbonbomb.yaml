@@ -1,0 +1,50 @@
+tags:
+  - AllowExceedNodeBorders
+shape: Circle
+borders:
+  - 1
+  - 1
+  - 1
+blobSize:
+  min: 1
+  max: 3.2
+ElementChoiceGroups:
+  RoomCenterElements:
+    selectionMethod: WeightedResample
+    choices:
+      - element: LiquidCarbonDioxide
+        weight: 0.5
+        overrides:
+          massOverride: 3600
+          temperatureOverride: 130
+      - element: SolidCrudeOil
+        weight: 0.5
+        overrides:
+          massOverride: 3600
+          temperatureOverride: 130
+  RoomBorderChoices0:
+    selectionMethod: WeightedResample
+    choices:
+      - element: LiquidCarbonDioxide
+        weight: 0.7
+        overrides:
+          massOverride: 2300
+          temperatureOverride: 130
+      - element: DirtyIce
+        weight: 0.2
+      - element: Ice
+        weight: 0.1
+  RoomBorderChoices1:
+    selectionMethod: WeightedResample
+    choices:
+      - element: DirtyIce
+        weight: 0.1
+      - element: Ice
+        weight: 0.1
+  RoomBorderChoices2:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Ice
+        weight: 0.1
+      - element: DirtyIce
+        weight: 0.2

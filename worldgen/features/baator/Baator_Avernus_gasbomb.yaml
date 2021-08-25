@@ -1,0 +1,22 @@
+tags:
+  - HighPriorityFeature
+  - AllowExceedNodeBorders
+shape: Splat
+borders:
+blobSize:
+  min: 1
+  max: 2
+ElementChoiceGroups:
+  RoomCenterElements:
+    selectionMethod: PickOneWeighted
+    choices:
+      - element: CarbonDioxide
+        weight: 1
+        overrides:
+          temperatureOverride: 270
+          massOverride: 90.3
+      - element: Methane
+        weight: 1
+        overrides:
+          temperatureOverride: 297
+          massMultiplier: 18.4

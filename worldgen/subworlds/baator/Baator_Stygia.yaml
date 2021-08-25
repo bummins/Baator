@@ -1,0 +1,40 @@
+biomeNoise: noise/subworldOcean
+temperatureRange: Chilly
+pdWeight: 4.5
+minChildCount: 7
+extraBiomeChildren: 1
+density:
+  min: 10
+  max: 15
+avoidRadius: 20.0
+sampleBehaviour: PoissonDisk
+biomes:
+  - name: biomes/Baator_Stygia/Briny
+    weight: 1
+    tags:
+      - BaatorPacu
+      - SeaLettuceSeed
+      - med_SaltPlantSeed
+      - med_SaltPlant
+      - BaatorWheezewort
+      - BaatorSeaWeed
+      - BaatorSeaWeedSeed
+  - name: biomes/Baator_Stygia/Salty
+    weight: 2
+    tags:
+      - BaatorPacu
+      - SeaLettuceSeed
+      - med_SaltPlantSeed
+      - med_SaltPlant
+      - BaatorWheezewort
+      - BaatorWheezewortSeed
+      - BaatorSeaWeed
+      - BaatorSeaWeedSeed
+features:
+  - type: features/baator/Baator_Stygia_crabs
+  - type: features/baator/Baator_Stygia_metal
+  - type: features/baator/Baator_Stygia_weeds
+tags:
+  - IgnoreCaveOverride
+  - River
+zoneType: Ocean

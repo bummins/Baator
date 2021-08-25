@@ -1,0 +1,54 @@
+tags:
+  - AllowExceedNodeBorders
+  - Wet
+shape: TallThin
+borders:
+  - 1
+  - 1
+  - 1
+blobSize:
+  min: 1
+  max: 3
+ElementChoiceGroups:
+  RoomCenterElements:
+    selectionMethod: WeightedResample
+    choices:
+      - element: CarbonDioxide
+        weight: 0.8
+        overrides:
+          massMultiplier: 18.1
+      - element: Water
+        weight: 0.2
+        overrides:
+          massOverride: 1000
+  RoomBorderChoices0:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Water
+        weight: 0.4
+        overrides:
+          massOverride: 1000
+      - element: CarbonDioxide
+        weight: 0.6
+        overrides:
+          massMultiplier: 31.7
+  RoomBorderChoices1:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Fertilizer
+        weight: 1
+        overrides:
+          massOverride: 50
+      - element: Sand
+        weight: 1
+      - element: SandStone
+        weight: 1
+      - element: OxyRock
+        weight: 0.2
+  RoomBorderChoices2:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Algae
+        weight: 0.8
+      - element: OxyRock
+        weight: 0.2

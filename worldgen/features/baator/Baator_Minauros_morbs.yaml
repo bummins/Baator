@@ -1,0 +1,53 @@
+tags:
+  - AllowExceedNodeBorders
+shape: ShortWide
+borders:
+  - 1
+  - 1
+  - 1
+internalMobs:
+ - type: BaatorGlom
+   count:
+      min: 0
+      max: 3
+blobSize:
+  min: 3
+  max: 7
+ElementChoiceGroups:
+  RoomCenterElements:
+    selectionMethod: HorizontalSlice
+    choices:
+      - element: ContaminatedOxygen
+        weight: 1.0
+        overrides:
+          massMultiplier: 12
+  RoomBorderChoices0:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Algae
+        weight: 0.1
+      - element: SlimeMold
+        weight: 0.3
+        overrides:
+          diseaseOverride: SlimeLung
+          diseaseAmountOverride: 1000000
+      - element: ContaminatedOxygen
+        weight: 0.3
+  RoomBorderChoices1:
+    selectionMethod: WeightedResample
+    choices:
+      - element: SlimeMold
+        weight: 0.7
+        overrides:
+          diseaseOverride: SlimeLung
+          diseaseAmountOverride: 1000000
+      - element: Algae
+        weight: 0.3
+  RoomBorderChoices2:
+    selectionMethod: WeightedResample
+    choices:
+      - element: SlimeMold
+        weight: 1
+        overrides:
+          diseaseOverride: SlimeLung
+          diseaseAmountOverride: 1000000

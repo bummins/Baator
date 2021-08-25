@@ -1,0 +1,105 @@
+name: STRINGS.WORLDS.TINYSTART.NAME
+description: STRINGS.WORLDS.TINYSTART.DESCRIPTION 
+nameTable: TERRA
+asteroidIcon: asteroid_niobium_planet_kanim
+disableWorldTraits: true
+#THIS IS JUST A DEBUG VERSION SWAP IT OUT LATER
+#name: STRINGS.WORLDS.BAATORDEBUG.NAME
+#description: STRINGS.WORLDS.BAATORDEBUG.DESCRIPTION
+
+worldsize:
+  X: 128
+  Y: 274
+layoutMethod: PowerTree
+
+defaultsOverrides:
+  data:
+    DrawWorldBorder: true
+    DrawWorldBorderOverVacuum: false
+    WorldBorderThickness: 1
+    WorldBorderRange: 0
+    OverworldDensityMin: 20
+    OverworldDensityMax: 20
+    OverworldAvoidRadius: 10
+    OverworldSampleBehaviour: PoissonDisk
+    OverworldMinNodes: 1
+
+startSubworldName: subworlds/sandstone/SandstoneStart
+startingBaseTemplate: bases/sandstoneBase
+startingBasePositionHorizontal:
+  min: 0.5
+  max: 0.5
+startingBasePositionVertical:
+  min: 0.6
+  max: 0.6
+
+# List all the zone files to load
+subworldFiles:
+  - name: subworlds/sandstone/SandstoneStart
+  - name: subworlds/sandstone/Sandstone
+  - name: expansion1::subworlds/forest/med_Forest
+  - name: subworlds/space/Space
+  - name: subworlds/baator/Baator_SurfaceCrags
+  - name: expansion1::subworlds/rust/med_Rust
+  - name: subworlds/baator/Baator_Big_Rust
+  - name: subworlds/baator/Baator_Malbolge
+  - name: subworlds/baator/Baator_Phlegethos
+  - name: subworlds/magma/Bottom
+  - name: subworlds/frozen/Frozen
+  - name: subworlds/marsh/HotMarsh
+  - name: subworlds/jungle/Jungle
+  
+unknownCellsAllowedSubworlds: 
+  - tagcommand: Default
+    command: Replace
+    subworldNames:
+      - subworlds/space/Space
+  - tagcommand: AtTag
+    tag: AtSurface
+    command: Replace
+    subworldNames:
+      - subworlds/space/Space
+  - tagcommand: DistanceFromTag
+    tag: AtSurface
+    minDistance: 1
+    maxDistance: 1
+    command: Replace
+    subworldNames:
+      - subworlds/baator/Baator_SurfaceCrags
+  - tagcommand: DistanceFromTag
+    tag: AtSurface
+    minDistance: 2
+    maxDistance: 2
+    command: Replace
+    subworldNames:
+      - subworlds/frozen/Frozen
+      - subworlds/marsh/HotMarsh
+      - subworlds/jungle/Jungle
+  - tagcommand: DistanceFromTag
+    tag: AtSurface
+    minDistance: 4
+    maxDistance: 4
+    command: Replace
+    subworldNames:
+      - subworlds/baator/Baator_Malbolge
+  - tagcommand: DistanceFromTag
+    tag: AtSurface
+    minDistance: 5
+    maxDistance: 99
+    command: Replace
+    subworldNames:
+      - subworlds/space/Space
+  - tagcommand: DistanceFromTag
+    tag: AtSurface
+    minDistance: 7
+    maxDistance: 8
+    command: Replace
+    subworldNames:
+      - subworlds/baator/Baator_Phlegethos
+  - tagcommand: DistanceFromTag
+    tag: AtDepths
+    minDistance: 0
+    maxDistance: 0
+    command: Replace
+    subworldNames:
+      - subworlds/magma/Bottom

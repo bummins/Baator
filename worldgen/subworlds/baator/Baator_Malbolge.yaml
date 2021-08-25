@@ -1,0 +1,65 @@
+biomeNoise: noise/Baator_Malbolge
+temperatureRange: VeryHot
+pdWeight: 4.2
+minChildCount: 5
+density:
+  min: 10
+  max: 20
+avoidRadius: 25.0
+sampleBehaviour: PoissonDisk
+# border types: rocky hardToDig impenetrable
+borderOverride: hardToDig
+biomes:
+  - name: biomes/Baator_Malbolge/SprinkleOfMalus
+    weight: 1
+    tags:
+       - med_ForestForagePlantPlanted
+  - name: biomes/Baator_Malbolge/MalbolgeOdium
+    weight: 1
+  - name: biomes/Baator_Malbolge/MalbolgeReliqua
+    weight: 1
+    tags:
+       - med_BasicSingleHarvestPlant
+       - BaatorLightBugPurple
+features:
+  - type: features/baator/Baator_Malbolge_oil
+  - type: features/baator/Baator_Malbolge_scalding
+tags:
+  - IgnoreCaveOverride
+subworldTemplateRules:
+  - names:
+    - poi/oil/small_oilpockets_geyser_a
+    - poi/oil/small_oilpockets_geyser_b
+#    - features/baator/Baator_Malbolge_oil
+    listRule: TryAll
+    priority: 105
+#pointsOfInterest:
+#  geysers_a:
+#    - bum_copperVolcano10
+#  geysers_b:
+#    - bum_goldVolcano12
+#  geysers_c:
+#    - poi_sediment_geyser_water 
+#  geysers_d:
+#    - bum_slush13
+#  geysers_e:
+#    - poi_swamp_geyser_steam
+#  ruins_a:
+#    - poi_swamp_frag_table
+#    - poi_swamp_frag_doorway
+#  ruins_b:
+#    - poi_swamp_lab_burrow
+#    - poi_swamp_lab_splitroom
+#    - poi_oil_switchdoor
+#  ruins_c:
+#    - poi_ladder_tunnel
+#    - poi_jungle_buttongate
+#  ruins_d:
+#    - poi_oil_switchdoor
+#zoneType: ToxicJungle
+#zoneType: CrystalCaverns
+zoneType: CrystalCaverns
+
+
+
+

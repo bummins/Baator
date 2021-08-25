@@ -1,0 +1,66 @@
+tags:
+  - AllowExceedNodeBorders
+shape: ShortWide
+borders:
+  - 1
+  - 1
+blobSize:
+  min: 5
+  max: 10
+ElementChoiceGroups:
+  RoomCenterElements:
+    selectionMethod: HorizontalSlice
+    choices:
+      - element: LiquidOxygen
+        weight: 0.8
+        overrides:
+          massOverride: 56
+          temperatureOverride: 63
+      - element: Ice
+        weight: 0.2
+        overrides:
+          massMultiplier: 4.0
+          temperatureOverride: 63
+  RoomBorderChoices0:
+    selectionMethod: HorizontalSlice
+    choices:
+      - element: LiquidOxygen
+        weight: 0.4
+        overrides:
+          massOverride: 450
+          temperatureOverride: 63
+      - element: DirtyIce
+        weight: 0.1
+        overrides:
+          temperatureOverride: 55
+      - element: BrineIce
+        weight: 0.1
+        overrides:
+          temperatureOverride: 55
+      - element: BleachStone
+        weight: 0.1
+        overrides:
+          massMultiplier: 52.5
+          temperatureOverride: 55
+      - element: Ice
+        weight: 0.3
+        overrides:
+          massOverride: 800
+          temperatureOverride: 55
+  RoomBorderChoices1:
+    selectionMethod: HorizontalSlice
+    choices:
+      - element: BrineIce
+        weight: 0.1
+        overrides:
+          massOverride: 800
+          temperatureOverride: 55
+      - element: BleachStone
+        weight: 0.1
+        overrides:
+          massMultiplier: 57.5
+          temperatureOverride: 55
+      - element: DirtyIce
+        weight: 0.1
+        overrides:
+          temperatureOverride: 55

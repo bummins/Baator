@@ -1,0 +1,36 @@
+biomeNoise: noise/subworldJungle
+temperatureRange: HellHot
+pdWeight: 2.5
+minChildCount: 4
+density:
+  min: 35
+  max: 45
+avoidRadius: 50.0
+sampleBehaviour: PoissonDisk
+borderOverride: hardToDig
+biomes:
+  - name: biomes/Baator_Phlegethos/LavaField
+    weight: 1
+#    overrides:
+#      massMultiplier: 500
+#subworldTemplateRules:
+#  - names:
+#    - geysers/small_volcano
+#    listRule: GuaranteeAll
+#    priority: 50
+#features:
+#  - type: features/baator/Baator_Phlegethos_rockgas
+tags:
+  - IgnoreCaveOverride
+  - NoGlobalFeatureSpawning
+  - ErodePointToBorder
+#pointsOfInterest:
+#  geysers_a:
+#    - geysers/small_volcano
+#  geysers_b:
+#    - geysers/small_volcano
+#    - expansion1::poi/poi_geyser_magma
+zoneType: MagmaCore
+
+
+

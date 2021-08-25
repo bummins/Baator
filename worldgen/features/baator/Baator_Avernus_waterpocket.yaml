@@ -1,0 +1,39 @@
+tags:
+  - AllowExceedNodeBorders
+  - Wet
+shape: Splat
+borders:
+  - 1
+blobSize:
+  min: 2
+  max: 2
+ElementChoiceGroups:
+  RoomCenterElements:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Water
+        weight: 0.2
+        overrides:
+          temperatureOverride: 287
+          massMultiplier: 12.3
+      - element: Mud
+        weight: 0.3
+        overrides:
+          temperatureOverride: 291
+          massMultiplier: 1.1
+      - element: Dirt
+        weight: 0.3
+        overrides:
+          temperatureOverride: 298
+          massMultiplier: 1.8
+  RoomBorderChoices0:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Algae
+        weight: 1
+        overrides:
+          temperatureOverride: 301
+      - element: Mud
+        weight: 1
+        overrides:
+          temperatureOverride: 300

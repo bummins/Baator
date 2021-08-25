@@ -1,0 +1,70 @@
+biomeNoise: noise/Baator_LavaTube
+temperatureRange: HellHot
+pdWeight: 3.0
+minChildCount: 4
+density:
+  min: 10
+  max: 20
+sampleBehaviour: PoissonDisk
+avoidRadius: 15.0
+# border types: rocky hardToDig impenetrable
+borderOverride: hardToDig
+biomes:
+  - name: biomes/Baator_Phlegethos/MagmaFissure
+    weight: 1
+  - name: biomes/Baator_Phlegethos/MagmaCaldera
+    weight: 1
+subworldTemplateRules:
+  - names:
+    - geysers/big_volcano
+    - geysers/volcanohole
+    - expansion1::poi/poi_geyser_magma
+    listRule: TryAll
+    priority: 500
+features:
+  - type: features/baator/Baator_Phlegethos_diamond
+#  - type: features/baator/Baator_Phlegethos_sulphurpit
+  - type: features/baator/Baator_Phlegethos_rockgas
+
+#featureTemplates:
+#  geysers/big_volcano: 2
+#  
+tags:
+  - IgnoreCaveOverride
+  - ErodePointToBorder
+#pointsOfInterest:
+# volcano_a:
+#    - geysers/volcanohole
+#    - geysers/big_volcano
+#   - geysers/small_volcano
+# volcano_b:
+#   - geysers/volcanohole
+#   - geysers/big_volcano
+#   - geysers/small_volcano
+#pointsOfInterest:
+#  geysers_a:
+#    - bum_copperVolcano10
+#  geysers_b:
+#    - bum_goldVolcano12
+#  geysers_c:
+#    - poi_sediment_geyser_water 
+#  geysers_d:
+#    - bum_slush13
+#  geysers_e:
+#    - poi_swamp_geyser_steam
+#  ruins_a:
+#    - poi_swamp_frag_table
+#    - poi_swamp_frag_doorway
+#  ruins_b:
+#    - poi_swamp_lab_burrow
+#    - poi_swamp_lab_splitroom
+#    - poi_oil_switchdoor
+#  ruins_c:
+#    - poi_ladder_tunnel
+#    - poi_jungle_buttongate
+#  ruins_d:
+#    - poi_oil_switchdoor
+zoneType: MagmaCore
+
+
+

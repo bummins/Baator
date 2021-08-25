@@ -1,0 +1,45 @@
+tags:
+  - AllowExceedNodeBorders
+shape: ShortWide
+borders:
+  - 1
+  - 1
+internalMobs:
+ - type: Crab
+   count:
+      min: 2
+      max: 3
+blobSize:
+  min: 3
+  max: 8
+ElementChoiceGroups:
+  RoomCenterElements:
+    selectionMethod: HorizontalSlice
+    choices:
+      - element: Hydrogen
+        weight: 1.0
+        overrides:
+          massOverride: 120
+          temperatureOverride: 250
+      - element: SaltWater
+        weight: 0.1
+        overrides:
+          massOverride: 160
+  RoomBorderChoices0:
+    selectionMethod: WeightedResample
+    choices:
+      - element: CrushedIce
+        weight: 0.2
+      - element: Ice
+        weight: 0.2
+      - element: Hydrogen
+        weight: 0.1
+        overrides:
+          temperatureOverride: 250
+  RoomBorderChoices1:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Salt
+        weight: 0.2
+      - element: CrushedIce
+        weight: 0.2

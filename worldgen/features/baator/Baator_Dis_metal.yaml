@@ -1,0 +1,49 @@
+tags:
+  - AllowExceedNodeBorders
+shape: Circle
+borders:
+  - 1
+  - 1
+  - 1
+blobSize:
+  min: 1.1
+  max: 3
+ElementChoiceGroups:
+  RoomCenterElements:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Lead
+        weight: 2.2  
+        overrides:
+          massMultiplier: 6.7
+          temperatureOverride: 293
+  RoomBorderChoices0:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Lead
+        weight: 0.4   
+        overrides:
+          massMultiplier: 6.6
+          temperatureOverride: 240
+      - element: RefinedCarbon
+        weight: 0.8      
+      - element: Sulfur
+        weight: 0.5
+  RoomBorderChoices1:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Rust
+        weight: 0.4
+      - element: Sulfur
+        weight: 0.4      
+      - element: RefinedCarbon
+        weight: 0.4
+  RoomBorderChoices2:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Sulfur
+        weight: 0.2
+      - element: Corium
+        weight: 0.2      
+      - element: Rust
+        weight: 0.2

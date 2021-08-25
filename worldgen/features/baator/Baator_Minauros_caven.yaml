@@ -1,0 +1,32 @@
+tags:
+  - AllowExceedNodeBorders
+shape: ShortWide
+borders:
+  - 1
+  - 1
+blobSize:
+  min: 3
+  max: 5
+ElementChoiceGroups:
+  RoomCenterElements:
+    selectionMethod: WeightedResample
+    choices:
+      - element: ContaminatedOxygen
+        weight: 1.0
+        overrides:
+          diseaseOverride: SlimeLung
+          diseaseAmountOverride: 1000000
+  RoomBorderChoices0:
+    selectionMethod: HorizontalSlice
+    choices:
+      - element: Algae
+        weight: 0.5
+      - element: ContaminatedOxygen
+        weight: 0.5
+  RoomBorderChoices1:
+    selectionMethod: WeightedResample
+    choices:
+      - element: ToxicMud
+        weight: 1
+      - element: ToxicSand
+        weight: 2

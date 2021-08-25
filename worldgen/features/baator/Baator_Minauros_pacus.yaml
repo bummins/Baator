@@ -1,0 +1,53 @@
+tags:
+  - Wet
+  - AllowExceedNodeBorders
+shape: TallThin
+borders:
+  - 2
+  - 1
+internalMobs:
+  - type: BaatorPacu
+    count:
+      min: 0
+      max: 2
+  - type: BaatorTropicalPacu
+    count:
+      min: 0
+      max: 2
+#  - type: BaatorColdPacu
+#    count:
+#     min: 0
+#      max: 1
+blobSize:
+  min: 4.6
+  max: 7.9
+ElementChoiceGroups:
+  RoomCenterElements:
+    selectionMethod: HorizontalSlice
+    choices:
+      - element: ContaminatedOxygen
+        weight: 0.3
+        overrides:
+          diseaseOverride: SlimeLung
+          diseaseAmountOverride: 1000000
+      - element: DirtyWater
+        weight: 0.7
+  RoomBorderChoices0:
+    selectionMethod: HorizontalSlice
+    choices:
+      - element: SedimentaryRock
+        weight: 0.3
+      - element: ContaminatedOxygen
+        weight: 0.3
+        overrides:
+          diseaseOverride: SlimeLung
+          diseaseAmountOverride: 1000000
+      - element: DirtyWater
+        weight: 0.2
+  RoomBorderChoices1:
+    selectionMethod: HorizontalSlice
+    choices:
+      - element: ToxicSand
+        weight: 0.2
+      - element: ToxicMud
+        weight: 0.3

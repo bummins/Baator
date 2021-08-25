@@ -1,0 +1,18 @@
+#ClassicBaatorCluster: Classic Styled Larger Starting Asteroid, Mix of all 9-Hell Biomes, Same as Spaced out Vanilla style with minor tweaks
+#name: STRINGS.CLUSTER_NAMES.BAATOR.NAME
+#description: STRINGS.CLUSTER_NAMES.BAATOR.DESCRIPTION
+#requiredDlcId: EXPANSION1_ID
+#coordinatePrefix: BAATOR-VAL9
+#forbiddenDlcId: EXPANSION1_ID # Uncomment when we remove the default cluster
+
+#skip: EditorOnly
+#difficulty: 5
+#menuOrder: 2
+#clusterCategory: 1
+
+#startWorldIndex: 0
+#worldPlacements:
+#- world: worlds/Baator
+#  allowedRings:
+#    min: 0
+#    max: 0

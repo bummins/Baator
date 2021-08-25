@@ -1,0 +1,32 @@
+biomeNoise: noise/Baator_Nessus
+#borderOverride: NONE
+temperatureRange: HumanHot
+pdWeight: 3.8
+minChildCount: 2
+density:
+  min: 7
+  max: 7
+avoidRadius: 5.0
+sampleBehaviour: PoissonDisk
+biomes:
+  - name: biomes/Baator_Nessus/Stalagmites
+    weight: 4
+    tags:
+      - Oxyfern
+      - BaatorPuft
+      - BaatorDarkBug
+      - PrickleGrass
+      - PrickleGrassSeed
+      - PrickleFlower
+#    overrides:
+#      massMultiplier: 50 #not supported
+features:
+  - type: features/baator/Baator_Nessus_oilvein
+  - type: features/baator/Baator_Nessus_ironvein
+  - type: features/baator/Baator_Nessus_ironvein
+tags:
+  - IgnoreCaveOverride
+#  - ErodePointToBorderInv
+#  - ErodePointToWorldTop
+#  - NoGlobalFeatureSpawning
+zoneType: ToxicJungle

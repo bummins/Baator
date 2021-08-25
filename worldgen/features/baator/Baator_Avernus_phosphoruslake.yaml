@@ -1,0 +1,70 @@
+tags:
+  - AllowExceedNodeBorders
+  - Wet
+shape: ShortWide
+borders:
+  - 1
+  - 1
+  - 1
+blobSize:
+  min: 1.1
+  max: 4.7
+internalMobs:
+ - type: BaatorDrecko
+   count:
+      min: 0
+      max: 2
+ - type: SpiceVine
+   count:
+      min: 0
+      max: 2
+ElementChoiceGroups:
+  RoomCenterElements:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Hydrogen
+        weight: 0.7
+        overrides:
+          massMultiplier: 4.5
+          temperatureOverride: 359
+      - element: LiquidPhosphorus
+        weight: 1
+        overrides:
+          massMultiplier: 6.6
+          temperatureOverride: 362
+  RoomBorderChoices0:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Hydrogen
+        weight: 0.6
+        overrides:
+          massMultiplier: 12.5
+          temperatureOverride: 352
+      - element: LiquidPhosphorus
+        weight: 0.4
+        overrides:
+          massMultiplier: 0.2
+          temperatureOverride: 360
+  RoomBorderChoices1:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Phosphorite
+        weight: 1
+        overrides:
+          massOverride: 50
+          temperatureOverride: 350
+      - element: SandStone
+        weight: 0.7
+  RoomBorderChoices2:
+    selectionMethod: WeightedResample
+    choices:
+      - element: SandStone
+        weight: 0.5
+        overrides:
+          massOverride: 50
+          temperatureOverride: 345
+      - element: Dirt
+        weight: 0.5
+        overrides:
+          massOverride: 50
+          temperatureOverride: 342

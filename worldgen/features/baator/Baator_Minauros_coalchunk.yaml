@@ -1,0 +1,43 @@
+tags:
+  - AllowExceedNodeBorders
+shape: ShortWide
+borders:
+  - 1
+  - 1
+blobSize:
+  min: 1.5
+  max: 2.0
+ElementChoiceGroups:
+  RoomCenterElements:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Corium
+        weight: 0.3
+        overrides:
+          massMultiplier: 14
+      - element: Carbon
+        weight: 0.3
+        overrides:
+          massMultiplier: 3.2
+  RoomBorderChoices0:
+    selectionMethod: HorizontalSlice
+    choices:
+      - element: Corium
+        weight: 1.0
+        overrides:
+          massMultiplier: 14
+      - element: Carbon
+        weight: 0.3
+        overrides:
+          massMultiplier: 3.2
+  RoomBorderChoices1:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Carbon
+        weight: 1.0
+        overrides:
+          massMultiplier: 14
+      - element: Carbon
+        weight: 0.3
+        overrides:
+          massMultiplier: 3.2

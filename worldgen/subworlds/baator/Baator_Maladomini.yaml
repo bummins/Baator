@@ -1,0 +1,41 @@
+biomeNoise: noise/Baator_Maladomini
+temperatureRange: VeryHot
+pdWeight: 5.1
+extraBiomeChildren: 5
+density:
+  min: 15
+  max: 25
+avoidRadius: 3
+sampleBehaviour: PoissonDisk
+biomes:
+  - name: biomes/Baator_Maladomini/Wasteland_Dense
+    weight: 1
+    tags:
+      - OilfloaterHighTemp
+      - OilfloaterHighTempBaby
+#      - CactusPlant
+      - EvilFlower
+features:
+  - type: features/baator/Baator_Maladomini_pool
+  - type: features/baator/Baator_Maladomini_gaspocket
+  - type: features/baator/Baator_Maladomini_heliumpocket
+  - type: features/baator/Baator_Maladomini_caven
+  - type: features/baator/Baator_Maladomini_moltenpool
+#subworldTemplateRules:
+#  - names:
+#    - poi/oil/small_oilpockets_geyser_d
+#    - poi/oil/small_oilpockets_geyser_e
+#    listRule: TrySome
+#    someCount: 1
+#    priority: 105
+#    allowedCellsFilter:
+#      - command: Replace
+#        tagcommand: DistanceFromTag
+#        tag: AtDepths
+#        minDistance: 1
+#        maxDistance: 3
+tags:
+  - IgnoreCaveOverride
+  - ErodePointToBorder
+zoneType: OilField
+

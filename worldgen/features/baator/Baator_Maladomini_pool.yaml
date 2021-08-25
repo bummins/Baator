@@ -1,0 +1,45 @@
+tags:
+  - AllowExceedNodeBorders
+shape: ShortWide
+borders:
+  - 2
+  - 2
+blobSize:
+  min: 4
+  max: 10
+ElementChoiceGroups:
+  RoomCenterElements:
+    selectionMethod: HorizontalSlice
+    choices:
+      - element: Petroleum
+        weight: 0.3
+        overrides:
+          massOverride: 450
+      - element: CarbonDioxide
+        weight: 0.7
+        overrides:
+          massOverride: 40
+          diseaseOverride: ZombieSpores
+          diseaseAmountOverride: 1000000
+  RoomBorderChoices0:
+    selectionMethod: WeightedResample
+    choices:
+      - element: GoldAmalgam
+        weight: 0.3
+      - element: SandStone
+        weight: 0.3
+      - element: CarbonDioxide
+        weight: 0.2
+        overrides:
+          massOverride: 40
+      - element: Lime
+        weight: 0.3
+        overrides:
+          massOverride: 800
+  RoomBorderChoices1:
+    selectionMethod: HorizontalSlice
+    choices:
+      - element: SandStone
+        weight: 0.6
+      - element: Lime
+        weight: 0.4

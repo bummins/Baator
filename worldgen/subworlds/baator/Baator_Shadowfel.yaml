@@ -1,0 +1,39 @@
+biomeNoise: noise/subworldForest
+temperatureRange: HumanWarm
+pdWeight: 3
+density:
+  min: 10
+  max: 15
+avoidRadius: 10.0
+minChildCount: 4
+sampleBehaviour: PoissonDisk
+biomes:
+  - name: biomes/Baator_Shadowfel/SterileSoil
+    weight: 1
+    tags:
+      - Oxyfern
+      - BaatorTree
+#      - med_BasicSingleHarvestPlant
+#      - forestCluster_BasicSingleHarvestPlantSeed
+      - PrickleGrass
+      - PrickleGrassSeed
+      - med_ForestForagePlantPlanted
+      - med_LightBug
+      - LeafyPlant        
+      - LeafyPlantSeed
+      - BaatorUnhappyPip
+  - name: biomes/Baator_Shadowfel/MetalRich
+    weight: 2
+    tags:
+      - BaatorTree
+      - PrickleFlower
+      - PrickleFlowerSeed
+      - BaatorLightBugPurple
+      - LeafyPlant        
+      - LeafyPlantSeed
+      - BaatorUnhappyPip
+tags:
+  - IgnoreCaveOverride
+features:
+  - type: expansion1::features/forest/OxyrockCave
+zoneType: CrystalCaverns

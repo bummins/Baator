@@ -1,0 +1,30 @@
+tags:
+  - AllowExceedNodeBorders
+shape: ShortWide
+borders:
+  - 1
+blobSize:
+  min: 4
+  max: 8
+internalMobs:
+  - type: OilWell
+    count:
+      min: 0
+      max: 1
+ElementChoiceGroups:
+  RoomCenterElements:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Obsidian
+        weight: 1        
+      - element: SourGas
+        weight: 3        
+        overrides:
+          massOverride: 930
+  RoomBorderChoices0:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Obsidian
+        weight: 2
+      - element: Dirt
+        weight: 1

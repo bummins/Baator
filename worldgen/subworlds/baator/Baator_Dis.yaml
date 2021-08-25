@@ -1,0 +1,29 @@
+biomeNoise: noise/Baator_Dis
+temperatureRange: HumanHot
+pdWeight: 4.5
+minChildCount: 7
+extraBiomeChildren: 1
+density:
+  min: 10
+  max: 15
+avoidRadius: 20.0
+sampleBehaviour: PoissonDisk
+biomes:
+  - name: biomes/Baator_Dis/Fallout
+    weight: 1
+    tags:
+      - med_BulbPlantSeed
+      - med_BulbPlant
+      - WormPlantSeed
+      - WormPlant
+features:
+  - type: features/baator/Baator_Dis_sulphurpit
+  - type: features/baator/Baator_Dis_bugs
+  - type: features/baator/Baator_Dis_worms
+  - type: features/baator/Baator_Dis_metal
+  - type: features/baator/Baator_Dis_wastepool
+
+tags:
+  - IgnoreCaveOverride
+#  - River
+zoneType: Metallic

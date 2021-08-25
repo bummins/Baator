@@ -1,0 +1,56 @@
+tags:
+  - AllowExceedNodeBorders
+shape: ShortWide
+borders:
+  - 2
+  - 2
+  - 1
+blobSize:
+  min: 5
+  max: 7.2
+internalMobs:
+  - type: EvilFlower
+    count:
+      min: 1
+      max: 2
+ElementChoiceGroups:
+  RoomCenterElements:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Helium
+        weight: 0.8
+        overrides:
+          massOverride: 40
+      - element: FoolsGold
+        weight: 0.2
+  RoomBorderChoices0:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Helium
+        weight: 0.2
+        overrides:
+          massOverride: 40
+      - element: FoolsGold
+        weight: 0.3
+      - element: SedimentaryRock
+        weight: 0.3
+      - element: PhosphateNodules
+        weight: 0.3
+        overrides:
+          massOverride: 800
+  RoomBorderChoices1:
+    selectionMethod: WeightedResample
+    choices:
+      - element: SedimentaryRock
+        weight: 0.6
+      - element: PhosphateNodules
+        weight: 0.2
+      - element: SandStone
+        weight: 0.2
+  RoomBorderChoices2:
+    selectionMethod: WeightedResample
+    choices:
+      - element: SandStone
+        weight: 0.6
+      - element: SedimentaryRock
+        weight: 0.4

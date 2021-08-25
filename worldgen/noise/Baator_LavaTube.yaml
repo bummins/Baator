@@ -1,0 +1,118 @@
+settings:
+  zoom: 0.1
+  normalise: true
+  seamless: false
+  lowerBound:
+    X: 2
+    Y: 2
+  upperBound:
+    X: 4
+    Y: 4
+  name: Baator_LavaTube
+  pos:
+    X: 0
+    Y: 0
+links:
+- target:
+    type: Modifier
+    name: Scale2D_noise
+  source0:
+    type: Primitive
+    name: SimplexPerlin
+- target:
+    type: Modifier
+    name: Scale2D_tubes
+  source0:
+    type: Primitive
+    name: SimplexPerlin
+- target:
+    type: Transformer
+    name: Displace
+  source0:
+    type: Modifier
+    name: Scale2D_tubes
+  source1:
+    type: Modifier
+    name: Scale2D_noise
+  source2:
+    type: Primitive
+    name: Constant
+  source3:
+    type: Primitive
+    name: Constant
+- target:
+    type: Filter
+    name: RidgedMultiFractal_Syr4xOFM
+  source0:
+    type: Transformer
+    name: Displace
+- target:
+    type: Terminator
+    name: TERMINATOR
+  source0:
+    type: Filter
+    name: RidgedMultiFractal_Syr4xOFM
+primitives:
+  SimplexPerlin:
+    primative: SimplexPerlin
+    quality: Best
+    seed: 15
+    offset: 1
+    name: SimplexPerlin
+    pos:
+      X: 100
+      Y: 380
+  Constant:
+    primative: Constant
+    quality: Fast
+    seed: 0
+    offset: 0
+    name: Constant
+    pos:
+      X: 900
+      Y: 720
+filters:
+  RidgedMultiFractal_Syr4xOFM:
+    filter: RidgedMultiFractal
+    frequency: 1
+    lacunarity: 0
+    octaves: 1
+    offset: 1
+    gain: 1
+    exponent: 1
+    name: RidgedMultiFractal_Syr4xOFM
+    pos:
+      X: 1300
+      Y: 460
+transformers:
+  Displace:
+    transformerType: Displace
+#    rotation:
+#      X: 0
+#      Y: 0
+    pos:
+      X: 1115
+      Y: 318
+selectors: {}
+modifiers:
+  Scale2D_tubes:
+    modifyType: Scale2d
+    scale2d:
+      X: 1
+      Y: 0.3
+    name: Scale2D_tubes
+    pos:
+      X: 531
+      Y: 234
+  Scale2D_noise:
+    modifyType: Scale2d
+    scale2d:
+      X: 0.4
+      Y: 0.2
+    name: Scale2D_noise
+    pos:
+      X: 600
+      Y: 600
+combiners: {}
+floats: {}
+controlpoints: {}

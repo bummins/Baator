@@ -1,0 +1,37 @@
+tags:
+  - AllowExceedNodeBorders
+  - PreventAmbientMobsInFeature # Prevent WormPlant from spawning here
+shape: Splat
+borders:
+  - 1
+blobSize:
+  min: 8
+  max: 15
+internalMobs:
+  - type: DivergentWorm
+    count:
+      min: 0
+      max: 2
+  - type: WormPlant
+    count:
+      min: 0
+      max: 3
+ElementChoiceGroups:
+  RoomCenterElements:
+    selectionMethod: HorizontalSlice
+    choices:
+      - element: Oxygen
+        weight: 0.6
+        overrides:
+          temperatureOverride: 283
+      - element: Sucrose
+        weight: 0.2
+      - element: Sulfur
+        weight: 0.2
+  RoomBorderChoices0:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Sulfur
+        weight: 0.3
+      - element: Sucrose
+        weight: 0.1

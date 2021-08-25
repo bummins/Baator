@@ -1,0 +1,96 @@
+TerrainBiomeLookupTable:
+  # keys to remove from in-memory structure when this file is loaded
+  remove: [] 
+  # elements to add from in-memory structure when this file is loaded
+  add:
+    Wasteland_Dense: # exp1 Terra start
+    - content: SandStone
+      bandSize: 0.16
+      overrides:
+        massMultiplier: 2.9 
+    - content: Sand
+      bandSize: 0.06
+    - content: SedimentaryRock
+      bandSize: 0.1
+    - content: Regolith
+      bandSize: 0.15
+      overrides:
+        massMultiplier: 2.4
+    - content: Clay
+      bandSize: 0.25
+      overrides:
+        massMultiplier: 0.6
+    - content: Sand
+      bandSize: 0.25
+      overrides:
+        massMultiplier: 2.4
+    - content: Petroleum  #high pressure sulfur
+      bandSize: 0.01
+      overrides:
+        massMultiplier: 12
+    - content: FoolsGold
+      bandSize: 0.4
+      overrides:
+        massMultiplier: 4
+    - content: CarbonDioxide
+      bandSize: 0.4
+      overrides:
+        massOverride: 33
+        diseaseOverride: ZombieSpores
+        diseaseAmountOverride: 1000000
+    - content: Helium
+      bandSize: 0.1
+      overrides:
+        massOverride: 3.1
+    Cave_Dense: # exp1 Terra start
+    - content: SedimentaryRock
+      bandSize: 0.2
+    - content: GoldAmalgam
+      bandSize: 0.15
+      overrides:
+        massOverride: 350
+    - content: Regolith
+      bandSize: 0.2
+    - content: Lime
+      bandSize: 0.36
+      overrides:
+        massMultiplier: 0.2
+    - content: GoldAmalgam
+      bandSize: 0.1
+      overrides:
+        massOverride: 850
+    - content: CarbonDioxide
+      bandSize: 1
+      overrides:
+        massOverride: 5.5
+        diseaseOverride: ZombieSpores
+        diseaseAmountOverride: 1000000
+    Barren_Dense: # exp1 Terra start
+    - content: SedimentaryRock
+      bandSize: 0.05
+    - content: Regolith
+      bandSize: 0.3
+      overrides:
+        massMultiplier: 2.4
+    - content: Lime
+      bandSize: 0.1
+      overrides:
+        massMultiplier: 0.3
+    - content: GoldAmalgam
+      bandSize: 0.2
+      overrides:
+        massMultiplier: 1.9
+    - content: FoolsGold
+      bandSize: 0.2
+    - content: CarbonDioxide
+      bandSize: 0.7
+      overrides:
+        massOverride: 8.5
+        diseaseOverride: ZombieSpores
+        diseaseAmountOverride: 1000000
+#    - content: GoldAmalgam
+#      bandSize: 0.8
+#      overrides:
+#        massMultiplier: 2
+#    - content: Regolith
+#      bandSize: 0.2

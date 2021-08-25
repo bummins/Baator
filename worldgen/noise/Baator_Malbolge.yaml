@@ -1,0 +1,63 @@
+settings:
+  zoom: 0.01
+  normalise: true
+  lowerBound:
+    X: 2
+    Y: 2
+  upperBound:
+    X: 4
+    Y: 4
+  name: Baator_Malbolge
+links:
+- target:
+    type: Filter
+    name: DefaultDensityFilter
+  source0:
+    type: Primitive
+    name: DefaultDensityPrimative
+- target:
+    type: Modifier
+    name: LayerSqueue
+- target:
+    type: Terminator
+    name: TERMINATOR
+  source0:
+    type: Filter
+    name: DefaultDensityFilter
+primitives:
+  DefaultDensityPrimative:
+    primative: SimplexPerlin
+    quality: Standard
+    seed: 3
+    offset: 1
+    name: DefaultDensityPrimative
+    pos:
+      X: -839
+      Y: 5
+filters:
+  DefaultDensityFilter:
+    filter: RidgedMultiFractal
+    frequency: 5
+    lacunarity: 1.5
+    octaves: 6
+    offset: 1
+    gain: 1
+    exponent: 0.9
+    name: DefaultDensityFilter
+    pos:
+      X: 0
+      Y: 0
+modifiers:
+  LayerSqueue:
+    modifyType: Scale2d
+    lower: -1
+    upper: 1
+    exponent: 0.02
+    scale: 1
+    scale2d:
+      X: 1.20
+      Y: 0.30
+    name: LayerSqueue
+    pos:
+      X: 0
+      Y: 0

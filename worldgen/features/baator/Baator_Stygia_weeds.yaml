@@ -1,0 +1,61 @@
+tags:
+  - Wet
+  - AllowExceedNodeBorders
+shape: TallThin
+borders:
+  - 1
+  - 2
+internalMobs:
+ - type: BaatorSeaWeed
+   count:
+      min: 2
+      max: 3
+blobSize:
+  min: 4
+  max: 8
+ElementChoiceGroups:
+  RoomCenterElements:
+    selectionMethod: WeightedResample
+    choices:
+      - element: SaltWater
+        weight: 0.9
+        overrides:
+          massOverride: 800
+          temperatureOverride: 325
+      - element: Hydrogen
+        weight: 0.3
+        overrides:
+          massMultiplier: 1.3
+          temperatureOverride: 325
+  RoomBorderChoices0:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Hydrogen
+        weight: 0.3
+        overrides:
+          massMultiplier: 1.8
+          temperatureOverride: 283
+      - element: Sand
+        weight: 0.4
+        overrides:
+          massMultiplier: 1.8
+          temperatureOverride: 283
+      - element: Granite
+        weight: 0.3
+        overrides:
+          temperatureOverride: 282
+  RoomBorderChoices1:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Salt
+        weight: 0.4
+        overrides:
+          temperatureOverride: 282
+      - element: Sand
+        weight: 0.4
+        overrides:
+          temperatureOverride: 282
+      - element: Granite
+        weight: 0.2
+        overrides:
+          temperatureOverride: 282

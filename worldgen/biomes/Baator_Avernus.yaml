@@ -1,0 +1,131 @@
+TerrainBiomeLookupTable:
+  # keys to remove from in-memory structure when this file is loaded
+  remove: [] 
+  # elements to add from in-memory structure when this file is loaded
+  add:
+    Muddy_Dirt_Start:
+    - content: Dirt
+      bandSize: 0.1
+      overrides:
+        massMultiplier: 0.08
+    - content: Mud
+      bandSize: 0.03
+      overrides:
+        massMultiplier: 0.5
+    - content: Water
+      bandSize: 0.005
+      overrides:
+        massOverride: 7900
+    - content: SandStone
+      bandSize: 0.15
+    - content: CrushedRock
+      bandSize: 0.05
+    - content: IgneousRock
+      bandSize: 0.15
+      overrides:
+        massMultiplier: 1.2
+    - content: Sand
+      bandSize: 0.2
+    - content: Algae
+      bandSize: 0.2
+      overrides:
+        massMultiplier: 2.1
+    - content: AluminumOre
+      bandSize: 0.06
+      overrides:
+        massMultiplier: 1.4
+    - content: Oxygen
+      bandSize: 1.3      
+    Muddy_Dirt_Dense: # exp1 Terra start
+    - content: Dirt
+      bandSize: 0.05
+      overrides:
+        massMultiplier: 0.42
+    - content: Mud
+      bandSize: 0.13
+      overrides:
+        massMultiplier: 0.48
+    - content: SandStone
+      bandSize: 0.1
+    - content: CrushedRock
+      bandSize: 0.1
+    - content: Granite
+      bandSize: 0.1
+      overrides:
+        massMultiplier: 1.3
+    - content: Sand
+      bandSize: 0.2
+    - content: Algae
+      bandSize: 0.2
+      overrides:
+        massMultiplier: 0.75
+    - content: AluminumOre
+      bandSize: 0.06
+      overrides:
+        massMultiplier: 1.4
+    - content: Oxygen
+      bandSize: 1.3
+    Muddy_Algae_Dense:
+    - content: SandStone
+      bandSize: 0.1
+    - content: Mud
+      bandSize: 0.2
+      overrides:
+        massMultiplier: 0.75
+    - content: AluminumOre 
+      bandSize: 0.15
+      overrides:
+        massMultiplier: 1.6
+    - content: Dirt
+      bandSize: 0.2
+      overrides:
+        massMultiplier: 0.26
+    - content: Algae
+      bandSize: 0.2
+      overrides:
+        massMultiplier: 2.4
+        diseaseOverride: SlimeLung
+        diseaseAmountOverride: 9000000
+    - content: SlimeMold
+      bandSize: 0.06
+      overrides:
+        massMultiplier: 3
+    - content: Lead
+      bandSize: 0.14
+      overrides:
+        massMultiplier: 0.7
+    - content: Sand
+      bandSize: 0.1
+    - content: CarbonDioxide
+      bandSize: 1
+    Metal_Coal_Dense:
+    - content: Sand
+      bandSize: 0.03
+    - content: IgneousRock
+      bandSize: 0.05
+      overrides:
+        massMultiplier: 0.6
+    - content: CrushedRock
+      bandSize: 0.05
+    - content: Dirt
+      bandSize: 0.1
+      overrides:
+        massMultiplier: 0.18
+    - content: Clay
+      bandSize: 0.1
+      overrides:
+        massMultiplier: 0.2
+    - content: Lead
+      bandSize: 0.03
+      overrides:
+        massMultiplier: 1.2
+    - content: Carbon
+      bandSize: 0.1
+      overrides:
+        massMultiplier: 4.8
+    - content: CarbonDioxide
+      bandSize: 0.7
+    - content: CrushedRock
+      bandSize: 0.2
+    - content: Sand
+      bandSize: 0.1

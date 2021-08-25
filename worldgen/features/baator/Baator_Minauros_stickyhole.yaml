@@ -1,0 +1,31 @@
+tags:
+  - AllowExceedNodeBorders
+shape: ShortWide
+borders:
+  - 1
+  - 2
+blobSize:
+  min: 2.5
+  max: 3
+ElementChoiceGroups:
+  RoomCenterElements:
+    selectionMethod: WeightedResample
+    choices:
+      - element: SolidNaphtha
+        weight: 1.0
+        overrides:
+          massMultiplier: 56
+  RoomBorderChoices0:
+    selectionMethod: HorizontalSlice
+    choices:
+      - element: Bitumen
+        weight: 0.3
+      - element: Carbon
+        weight: 1
+  RoomBorderChoices1:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Carbon
+        weight: 0.3
+      - element: Bitumen
+        weight: 1

@@ -1,0 +1,413 @@
+# ================================================================================================================================ 
+# - Baator world gen 
+# ================================================================================================================================
+# Baator Shadowfel  :   32c - Mud, Dirt, CrushedRock, SandStone, Sand, AluminumOre, CopperOre, PhosphorusLake, Hydrogen
+# Baator Avernus    :   22c - Mud, Dirt, CrushedRock, SandStone, Sand, AluminumOre, CopperOre, PhosphorusLake, Hydrogen
+# Forest warm       :   32c - Dirt, IgneousRock, AluminumOre, Water, Arbor Tree, Hexalent, meal worm, MirthLeaf, Shinebug, Pip
+# Baator Minauros   :   48c - Mud, PolutedDirt, SedimentaryRock, SlimeMold, Algae, Coal, Corium, Polluted Water, Swamp Chard, Arbor Tree, Pacu, TropicalPacu, Morb, 
+# Baator Madadomini :  200c - Sandstone, Sand, AluminumOre, SedimentaryRock, Lime, Regolith, MaficRock, Pyrite, Helium, JumpingJoya, Sporchid, MoltenSlickers, 
+# Baator Phlegethos : 2200c - Magama, Obsidian, Abyssalite RefinedCarbon, Sulphur, Diamond
+# Baator Cania      : -260c - Snow, Bleachstone, PolutedIce, BrineIce, Ice, Sand, Cobaltite, Poluted Oxygen, Chlorine
+# Baator Malbolge   :  230c - Dirt, Clay, Fossil, SedimentaryRock, Obsidian, Electrum, Wolframite, Mercury, Steam, Sour Gas
+# Baator Stygia     :  -20c - CrushedIce, Granite, Ice, Snow, Salt, Wolframite, Copper, SaltWater, Brine, Hydrogen, PokeShell, Waterweeds seeds
+# Baator Dis        :   45c - Sandstone, Iron,  Urainium, Corium, syngas
+# Baator Nessus     :  100c - Lime, MaficRock, SandStone, Sand, SedimentaryRock, Phosphorite, Poluted Oxygen
+# ================================================================================================================================
+name: STRINGS.WORLDS.BAATORMOONLET.NAME
+description: STRINGS.WORLDS.BAATORMOONLET.DESCRIPTION
+nameTable: TERRA
+asteroidIcon: asteroid_baator_small_kanim
+disableWorldTraits: true
+
+#All biome placementment rules are based on size 256x416
+worldsize:
+  X: 160
+  Y: 274
+layoutMethod: PowerTree
+
+fixedTraits:
+  - sunlightVeryVeryLow
+  - cosmicRadiationVeryVeryLow
+
+seasons:
+  - MeteorShowers
+
+defaultsOverrides:
+  data:
+    DrawWorldBorder: true
+    DrawWorldBorderOverVacuum: false
+    WorldBorderThickness: 4
+    WorldBorderRange: 2
+# == Errata == : These settings cause More Worldgen failures to occur, use subworld settings by default
+#    OverworldDensityMin: 5
+#    OverworldDensityMax: 21
+#    OverworldAvoidRadius: 5
+#    OverworldSampleBehaviour: PoissonDisk
+#    OverworldMinNodes: 1
+
+startSubworldName: subworlds/baator/Baator_AvernusStart     #1.1
+startingBaseTemplate: bases/baatorBase
+startingBasePositionHorizontal:
+  min: 0.5
+  max: 0.5
+startingBasePositionVertical:
+  min: 0.5
+  max: 0.5
+
+# List all the zone files to load
+subworldFiles:
+#  - name: subworlds/sandstone/SandstoneStart
+#  - name: subworlds/sandstone/Sandstone
+  - name: subworlds/space/Space
+  - name: subworlds/baator/Baator_SurfaceCrags
+#  - name: subworlds/baator/Baator_Big_Rust
+  - name: subworlds/baator/Baator_Shadowfel                 #0
+    minCount: 1
+  - name: subworlds/baator/Baator_AvernusStart               #1.1
+  - name: subworlds/baator/Baator_AvernusMini                #1.2
+    minCount: 1
+    maxCount: 2
+  - name: subworlds/baator/Baator_Avernus                    #1.3
+#    minCount: 3
+  - name: subworlds/baator/Baator_Dis                        #2
+    minCount: 1
+  - name: subworlds/baator/Baator_Minauros                   #3
+    minCount: 2
+    weight: 1.2
+  - name: subworlds/baator/Baator_Phlegethos                 #4
+    minCount: 1
+  - name: subworlds/baator/Baator_Stygia                     #5
+    minCount: 2
+  - name: subworlds/baator/Baator_Malbolge                   #6
+    minCount: 1
+  - name: subworlds/baator/Baator_Maladomini                 #7
+    minCount: 1
+  - name: subworlds/baator/Baator_Cania                      #8
+    minCount: 1
+  - name: subworlds/baator/Baator_Nessus                     #9
+    minCount: 1
+  - name: subworlds/baator/Baator_LavaField                  #10.1
+    minCount: 1
+  - name: subworlds/baator/Baator_LavaTube                   #10.2
+    minCount: 1
+    maxCount: 1
+
+#Worldgen is designed to create some lavatubes around the lower sides of the map
+#this has to be done by order using Replace as unionwith doesnt give the desired effects
+#         |<------- Lowest Priority                           Highest Priority ------->| 
+#Order is: Space, Malbolge, LavaTube, Phlegethos, Central Rings, Cania/Stygia, SurfaceCrags, Space
+unknownCellsAllowedSubworlds: 
+  # ================================ 
+  # - Default
+  # ================================ 
+  - tagcommand: Default
+    command: Replace
+    subworldNames:
+#      - subworlds/baator/Baator_Avernus
+      - subworlds/space/Space
+  # ================================ 
+  # - Low priority Biomes - Bottom
+  # ================================ 
+    # Ring-2 - ALL
+  - tagcommand: DistanceFromTag
+    tag: AtStart
+    minDistance: 2
+    maxDistance: 6
+    command: Replace
+    subworldNames:
+      - subworlds/baator/Baator_Shadowfel                  #0
+#      - subworlds/baator/Baator_Avernus                    #1.3
+      - subworlds/baator/Baator_Dis                        #2
+      - subworlds/baator/Baator_Minauros                   #3
+      - subworlds/baator/Baator_Maladomini                 #7
+      - subworlds/baator/Baator_Nessus                     #9
+
+  # ================================ 
+  # - Medium priority Biomes - Rings 
+  # ================================
+  # At Bottom 
+  - tagcommand: DistanceFromTag
+    tag: AtDepths
+    minDistance: 0
+    maxDistance: 0
+    command: Replace
+    subworldNames:
+      - subworlds/baator/Baator_LavaField                  #10.1
+      - subworlds/baator/Baator_Phlegethos                 #4
+  # At Bottom +1
+  - tagcommand: DistanceFromTag
+    tag: AtDepths
+    minDistance: 1
+    maxDistance: 1
+    command: Replace
+    subworldNames:
+      - subworlds/baator/Baator_Malbolge                   #6
+      - subworlds/baator/Baator_LavaTube                   #10.2
+  # ================================ 
+  # - High priority Biomes - Surface
+  # ================================ 
+  # At Surface
+  - tagcommand: DistanceFromTag
+    tag: AtSurface
+    minDistance: 0
+    maxDistance: 0
+    command: Replace
+    subworldNames:
+      - subworlds/space/Space
+  - tagcommand: DistanceFromTag
+    tag: AtSurface
+    minDistance: 1
+    maxDistance: 1
+    command: Replace
+    subworldNames:
+      - subworlds/baator/Baator_SurfaceCrags
+  - tagcommand: DistanceFromTag
+    tag: AtSurface
+    minDistance: 2
+    maxDistance: 2
+    command: Replace
+    subworldNames:
+      - subworlds/baator/Baator_Cania                      #8
+      - subworlds/baator/Baator_Stygia                     #5
+  # ================================ 
+  # - High priority Biomes - Start
+  # ================================
+  # CoreRing-1
+  - tagcommand: DistanceFromTag
+    tag: AtStart
+    minDistance: 1
+    maxDistance: 1
+    command: Replace
+    subworldNames:
+      - subworlds/baator/Baator_Shadowfel                  #0
+      - subworlds/baator/Baator_AvernusMini                #1.2
+      - subworlds/baator/Baator_Stygia                     #5
+      - subworlds/baator/Baator_Minauros                   #3
+#      - subworlds/baator/Baator_Avernus                    #1.3
+worldTemplateRules:
+  # ================================ 
+  # - Points of interest - Warp
+  # ================================ 
+  # Gravitas
+  - names:
+    - expansion1::poi/warp/sender
+    - expansion1::poi/warp/receiver
+    - expansion1::poi/warp/teleporter
+    listRule: GuaranteeAll
+    priority: 500
+    allowDuplicates: false
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 2
+        maxDistance: 5
+      - command: ExceptWith
+        tagcommand: DistanceFromTag
+        tag: AtSurface
+        minDistance: 0
+        maxDistance: 1
+      - command: ExceptWith
+        tagcommand: DistanceFromTag
+        tag: AtDepths
+        minDistance: 0
+        maxDistance: 1
+  # ================================ 
+  # - Points of interest - Ruines
+  # ================================ 
+  # StartZone
+  - names:
+    - poi/Baator_Food
+    - poi/Baator_Fridge
+    listRule: TryAll
+    priority: 490
+    useRelaxedFiltering: true
+    allowExtremeTemperatureOverlap: true
+    allowDuplicates: false
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 0
+        maxDistance: 1
+      - command: ExceptWith
+        subworldNames:
+          - subworlds/baator/Baator_Stygia
+          - subworlds/baator/Baator_Cania
+  - names:
+    - poi/Baator_Lounge
+    - poi/Baator_Changingroom
+    - poi/Baator_Tearoom
+    listRule: TrySome
+    someCount: 2
+    priority: 480
+    useRelaxedFiltering: true
+    allowExtremeTemperatureOverlap: true
+    allowDuplicates: false
+    allowedCellsFilter:
+      - command: Replace
+        subworldNames:
+          - subworlds/baator/Baator_Avernus
+  - names:
+    - poi/Baator_Breakroom
+    - poi/Baator_Extractionroom
+    - poi/Baator_Spacejunk1
+    - poi/Baator_Spacejunk2
+    listRule: TrySome
+    someCount: 2
+    priority: 470
+    allowExtremeTemperatureOverlap: true
+    allowDuplicates: false
+    allowedCellsFilter:
+      - command: Replace
+        subworldNames:
+          - subworlds/baator/Baator_SurfaceCrags
+  - names:
+    - poi/Baator_Weedfarm
+    - poi/Baator_Stygiaheatsink
+    listRule: TrySome
+    someCount: 1
+    priority: 460
+    allowExtremeTemperatureOverlap: true
+    allowDuplicates: false
+    allowedCellsFilter:
+      - command: Replace
+        subworldNames:
+          - subworlds/baator/Baator_Stygia
+  - names:
+    - poi/Baator_Caniaheatsink
+    listRule: TryOne
+    priority: 450
+    allowExtremeTemperatureOverlap: true
+    allowDuplicates: false
+    allowedCellsFilter:
+      - command: Replace
+        subworldNames:
+          - subworlds/baator/Baator_Cania
+  - names:
+    - poi/Baator_Nessusoozyoil
+    listRule: TryOne
+    priority: 445
+    allowExtremeTemperatureOverlap: true
+    allowDuplicates: false
+    allowedCellsFilter:
+      - command: Replace
+        subworldNames:
+          - subworlds/baator/Baator_Nessus
+  - names:
+    - poi/Baator_Nessuslimonites1
+    - poi/Baator_Nessuslimonites2
+    - poi/Baator_Nessuslimonites3
+    - poi/Baator_Nessuslimonites4
+    - poi/Baator_Nessuslimonites5
+    listRule: TrySome
+    someCount: 3
+    priority: 440
+    allowExtremeTemperatureOverlap: false
+    allowDuplicates: true
+    allowedCellsFilter:
+      - command: Replace
+        subworldNames:
+          - subworlds/baator/Baator_Nessus
+  - names:
+    - poi/frozen/lab_basement
+    - poi/frozen/lab_splitroom
+    - expansion1::poi/frozen/lab_basement_small
+    - expansion1::poi/frozen/frag_neuro
+    listRule: TryAll
+    priority: 430
+    allowExtremeTemperatureOverlap: true
+    allowDuplicates: false
+    allowedCellsFilter:
+      - command: Replace
+        subworldNames:
+          - subworlds/baator/Baator_Stygia
+          - subworlds/baator/Baator_Cania
+  # ================================ 
+  # - Points of interest - Geysers
+  # ================================ 
+  # Note: Oil Reserviors and Volcanos are handled in
+  #       Subworld file, as these are Gauranteed biomes
+  # Note: Subworlds cannot use GuaranteeAll Rule.
+  #
+  # Renewable Water Source 
+  # ---------------------------
+  - names:
+    - poi/Baator_Geyser_Natoriumusen
+    - poi/Baator_Geyser_Brinypool
+#    listRule: GuaranteeAll
+    listRule: TryAll
+    priority: 400
+    allowedCellsFilter:
+      - command: Replace
+        subworldNames:
+          - subworlds/baator/Baator_Stygia
+  - names:
+    - poi/Baator_Geyser_Rancidwater
+#    listRule: GuaranteeAll
+    listRule: TryAll
+    priority: 390
+    allowedCellsFilter:
+      - command: Replace
+        subworldNames:
+          - subworlds/baator/Baator_Minauros
+  # Hot Water Source 
+  # ---------------------------
+  - names:
+    - geysers/hot_steam
+    - geysers/steam
+    - geysers/hot_hydrogen
+    - geysers/chlorine_gas
+    - poi/Baator_Geyser_Methanetendrils
+    - poi/Baator_Geyser_Swimmingpool
+    listRule: TryAll
+    priority: 380
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 1
+        maxDistance: 3
+      - command: ExceptWith
+        zoneTypes: [ Space, FrozenWastes ]
+      - command: ExceptWith
+        tagcommand: DistanceFromTag
+        tag: AtDepths
+        minDistance: 0
+        maxDistance: 1
+  - names:
+    - poi/Baator_Geyser_Dissulphurspout
+    - expansion1::poi/poi_molten_aluminum_volcano
+    listRule: TryAll
+    priority: 340
+    allowedCellsFilter:
+      - command: Replace
+        subworldNames:
+          - subworlds/baator/Baator_Dis
+  # Undesirable Geysers
+  # ---------------------------
+  - names:
+    - poi/Baator_Geyser_Caniaco2
+    - poi/Baator_Geyser_Caniahypoxia
+    listRule: TryOne
+    priority: 200
+    allowedCellsFilter:
+      - command: Replace
+        subworldNames:
+          - subworlds/baator/Baator_Cania
+  # ================================ 
+  # - Points of interest - Generic Geysers
+  # ================================ 
+  # == Errata == : This causes the worldgen seeds to fail, monitor closely, expecially the Exceptwith command
+  - names:
+    - geysers/generic
+    listRule: TryOne
+    times: 2
+    ruleId: GenericGeysers
+    allowDuplicates: true
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: NotAtTag
+        tag: NoGlobalFeatureSpawning
+      - command: ExceptWith
+        zoneTypes: [ Space, FrozenWastes ]

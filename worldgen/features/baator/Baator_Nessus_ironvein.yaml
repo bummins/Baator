@@ -1,0 +1,34 @@
+tags:
+  - AllowExceedNodeBorders
+  - PreventAmbientMobsInFeature # Prevent WormPlant from spawning here
+shape: TallThin
+borders:
+  - 1
+  - 2
+blobSize:
+  min: 5
+  max: 8
+ElementChoiceGroups:
+  RoomCenterElements:
+    selectionMethod: Weighted
+    choices:
+      - element: Ironore
+        weight: 1.00
+        overrides:
+          massOverride: 6600
+  RoomBorderChoices0:
+    selectionMethod: Weighted
+    choices:
+      - element: SedimentaryRock
+        weight: 0.2
+      - element: Granite
+        weight: 0.5
+  RoomBorderChoices1:
+    selectionMethod: Weighted
+    choices:
+      - element: Granite
+        weight: 0.5
+      - element: Phosphorite
+        weight: 0.2
+      - element: SedimentaryRock
+        weight: 0.2

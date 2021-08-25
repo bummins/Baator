@@ -1,0 +1,30 @@
+tags:
+  - AllowExceedNodeBorders
+shape: Splat
+borders:
+blobSize:
+  min: 4
+  max: 8
+ElementChoiceGroups:
+  RoomCenterElements:
+    selectionMethod: PickOneWeighted
+    choices:
+      - element: Clay
+        weight: 150
+        overrides:
+          temperatureOverride: 275
+          massMultiplier: 2.8
+      - element: Carbon
+        weight: 150
+        overrides:
+          temperatureOverride: 275
+          massMultiplier: 2.8
+      - element: Sand
+        weight: 150
+        overrides:
+          temperatureOverride: 275
+      - element: SandStone
+        weight: 150
+        overrides:
+          temperatureOverride: 275
+          massMultiplier: 2.5

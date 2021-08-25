@@ -1,0 +1,54 @@
+biomeNoise: noise/Baator_Avernus
+temperatureRange: Room
+pdWeight: 8.5
+density:
+  min: 10
+  max: 20
+avoidRadius: 1
+minChildCount: 8
+doAvoidPoints: false
+dontRelaxChildren: false
+sampleBehaviour: PoissonDisk
+borderOverride: rocky
+biomes:
+  - name: biomes/Baator_Avernus/Muddy_Dirt_Start
+    weight: 4
+    tags:
+      - LightBug
+      - PrickleFlower
+      - PrickleFlowerSeed
+      - PrickleGrass
+      - PrickleGrassSeed
+      - Hatch
+      - HatchBuried  
+      - BasicSingleHarvestPlantSeed
+      - BasicSingleHarvestPlant
+      - BasicForagePlant
+      - BasicForagePlantPlanted
+  - name: biomes/Baator_Avernus/Metal_Coal_Dense
+    weight: 2
+    tags:   
+      - Hatch
+      - HatchBuried
+      - BasicForagePlant
+      - BasicForagePlantPlanted
+centralFeature:
+  type: features/generic/StartLocation
+features:
+# The Amount of water is carefully balanced, expect around 75,000-90,000kg
+  - type: features/baator/Baator_Avernus_waterwell
+  - type: features/baator/Baator_Avernus_waterpocket
+  - type: features/baator/Baator_Avernus_waterpocket
+  - type: features/baator/Baator_Avernus_waterpocket
+  - type: features/baator/Baator_Avernus_gasbomb
+  - type: features/baator/Baator_Avernus_gasbomb
+  - type: features/baator/Baator_Avernus_gasbomb
+  - type: features/baator/Baator_Avernus_gasbomb
+  - type: features/baator/Baator_Avernus_geodemetal
+
+tags:
+  - IgnoreCaveOverride
+  - NoGlobalFeatureSpawning
+  - StartWorld
+#  - SwapLakesToBelow
+zoneType: MagmaCore

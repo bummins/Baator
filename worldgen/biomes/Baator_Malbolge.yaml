@@ -1,0 +1,114 @@
+TerrainBiomeLookupTable:
+  # keys to remove from in-memory structure when this file is loaded
+  remove: [] 
+  # elements to add from in-memory structure when this file is loaded
+  add:
+    SprinkleOfMalus:
+    - content: Glass
+      bandSize: 0.006
+      overrides:
+        massMultiplier: 0.2
+    - content: Obsidian
+      bandSize: 0.004
+    - content: Dirt
+      bandSize: 0.2
+      overrides:
+        massMultiplier: 0.62
+    - content: SedimentaryRock
+      bandSize: 0.2
+    - content: Fossil
+      bandSize: 0.2
+      overrides:
+        massMultiplier: 4  
+    - content: Dirt
+      bandSize: 0.2  
+      overrides:
+        massMultiplier: 0.45
+    - content: Clay
+      bandSize: 0.2
+    - content: Electrum
+      bandSize: 0.06      
+      overrides:
+        massMultiplier: 2   
+    - content: Mercury
+      bandSize: 0.1
+      overrides:
+        massMultiplier: 11.0
+    - content: SourGas
+      bandSize: 0.08
+      overrides:
+        massOverride: 1700
+    - content: SedimentaryRock
+      bandSize: 0.2   
+    - content: Steam
+      bandSize: 0.2
+      overrides:
+        massMultiplier: 85.0
+    - content: CarbonDioxide
+      bandSize: 0.2   
+    MalbolgeOdium:
+    - content: Glass
+      bandSize: 0.0075
+      overrides:
+        massMultiplier: 0.2
+    - content: Obsidian
+      bandSize: 0.0025
+    - content: SedimentaryRock
+      bandSize: 0.03
+    - content: Fossil
+      bandSize: 0.02
+      overrides:
+        massMultiplier: 4
+    - content: Clay
+      bandSize: 0.01
+    - content: Wolframite
+      bandSize: 0.01
+    - content: Electrum
+      bandSize: 0.02
+      overrides:
+        massMultiplier: 4
+    - content: CarbonDioxide
+      bandSize: 0.03
+      overrides:
+        massMultiplier: 2
+    - content: Steam
+      bandSize: 0.06
+      overrides:
+        massMultiplier: 135.0
+    - content: SedimentaryRock
+      bandSize: 0.04   
+    - content: Mercury
+      bandSize: 0.04
+      overrides:
+        massMultiplier: 6.0
+    MalbolgeReliqua:  
+    - content: Glass
+      bandSize: 0.006
+      overrides:
+        massMultiplier: 0.2
+    - content: Obsidian
+      bandSize: 0.014
+    - content: Fossil
+      bandSize: 0.03
+      overrides:
+        massMultiplier: 1.4
+    - content: Clay
+      bandSize: 0.02
+    - content: Electrum
+      bandSize: 0.02
+      overrides:
+        massMultiplier: 4
+    - content: Tungsten
+      bandSize: 0.01
+      overrides:
+        massMultiplier: 0.4
+    - content: Mercury
+      bandSize: 0.002
+      overrides:
+        massMultiplier: 2.0
+    - content: CarbonDioxide
+      bandSize: 0.04
+    - content: SourGas
+      bandSize: 0.08
+      overrides:
+        massOverride: 1300

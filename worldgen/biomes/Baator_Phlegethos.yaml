@@ -1,0 +1,60 @@
+# designed for biomeNoise: noise/Baator_LavaTube
+#Magma is under pressure but going above 2400kg 25% above normal causes game to crash.
+TerrainBiomeLookupTable:
+  # keys to remove from in-memory structure when this file is loaded
+  remove: [] 
+  # elements to add from in-memory structure when this file is loaded
+  add:
+    MagmaFissure:
+    - content: Diamond
+      bandSize: 0.06
+    - content: Katairite
+      bandSize: 0.1
+    - content: Obsidian
+      bandSize: 0.12
+    - content: RefinedCarbon
+      bandSize: 0.12
+    - content: Magma
+      bandSize: 0.5
+      overrides:
+        massOverride: 2400
+    MagmaCaldera:
+    - content: Katairite
+      bandSize: 0.1
+    - content: Obsidian
+      bandSize: 0.1
+    - content: Magma
+      bandSize: 0.8
+      overrides:
+        massOverride: 2400
+    LavaField:
+    - content: Katairite
+      bandSize: 0.02
+    - content: Obsidian
+      bandSize: 0.02
+    - content: Magma
+      bandSize: 0.96
+      overrides:
+        massOverride: 2400
+    LavaTube:
+    - content: Diamond
+      bandSize: 0.02
+      overrides:
+        massMultiplier: 0.18
+    - content: Obsidian
+      bandSize: 0.02
+    - content: Katairite
+      bandSize: 0.06
+      overrides:
+    - content: Obsidian
+      bandSize: 0.1
+    - content: Magma
+      bandSize: 0.80
+      overrides:
+        massOverride: 2400
+#    - content: Diamond
+#      bandSize: 0.1
+#    - content: RefinedCarbon
+#      bandSize: 0.1
+#    - content: Obsidian
+#      bandSize: 0.2

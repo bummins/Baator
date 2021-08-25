@@ -1,0 +1,50 @@
+tags:
+  - AllowExceedNodeBorders
+shape: Splat
+borders:
+  - 1
+  - 1
+blobSize:
+  min: 5
+  max: 8.5
+internalMobs:
+  - type: EvilFlower
+    count:
+      min: 0
+      max: 2
+ElementChoiceGroups:
+  RoomCenterElements:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Helium
+        weight: 0.7
+        overrides:
+          massOverride: 23
+      - element: CarbonDioxide
+        weight: 0.3
+        overrides:
+          massOverride: 21
+          diseaseOverride: ZombieSpores
+          diseaseAmountOverride: 1000000
+  RoomBorderChoices0:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Helium
+        weight: 0.5
+        overrides:
+          massOverride: 40
+      - element: FoolsGold
+        weight: 0.2
+      - element: GoldAmalgam
+        weight: 0.1
+      - element: SedimentaryRock
+        weight: 0.2
+  RoomBorderChoices1:
+    selectionMethod: WeightedResample
+    choices:
+      - element: GoldAmalgam
+        weight: 0.3
+      - element: FoolsGold
+        weight: 0.4
+      - element: SedimentaryRock
+        weight: 0.3

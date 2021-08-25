@@ -1,0 +1,53 @@
+biomeNoise: expansion1::noise/Swamp
+temperatureRange: HumanWarm
+pdWeight: 4.2
+minChildCount: 12
+density:
+  min: 10
+  max: 15
+avoidRadius: 20.0
+extraBiomeChildren: 1
+doAvoidPoints: false
+sampleBehaviour: PoissonDisk
+biomes:
+  - name: biomes/Baator_Minauros/Basic
+    weight: 1
+    tags:
+      - BaatorReed 
+      - SwampLilySeed     
+      - BaatorLily
+      - med_WineCups
+      - med_WineCupsSeed
+      - med_SwampForagePlant
+      - med_SwampForagePlantPlanted
+      - BaatorGlom
+  - name: biomes/Baator_Minauros/Toxicmetal
+    weight: 1
+    tags:
+      - BaatorReed
+      - SwampLilySeed 
+      - BaatorLily
+      - med_SwampForagePlant
+      - med_SwampForagePlantPlanted
+      - BaatorGloms
+  - name: biomes/Baator_Minauros/Swamp
+    weight: 1.4
+    tags:
+      - BaatorReed
+      - SwampLilySeed 
+      - BaatorLily
+      - BaatorGlom
+      - Oxyfern
+      - BaatorPacu
+      - BaatorTropicalPacu
+features:
+  - type: features/baator/Baator_Minauros_caven
+  - type: features/baator/Baator_Minauros_stickyhole
+  - type: features/baator/Baator_Minauros_pacus
+  - type: features/baator/Baator_Minauros_morbs
+  - type: features/baator/Baator_Minauros_coalchunk
+  - type: features/baator/Baator_Minauros_balmyalcove
+tags:
+  - IgnoreCaveOverride
+#  - NoGlobalFeatureSpawning
+zoneType: Radioactive 

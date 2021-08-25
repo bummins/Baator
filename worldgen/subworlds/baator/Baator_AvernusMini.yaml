@@ -1,0 +1,44 @@
+biomeNoise: noise/Baator_Avernus
+temperatureRange: HumanWarm
+pdWeight: 2.8
+minChildCount: 12
+borderOverride: rocky
+tags:
+  - IgnoreCaveOverride
+density:
+  min: 5
+  max: 25
+avoidRadius: 5.0
+doAvoidPoints: false
+dontRelaxChildren: true
+sampleBehaviour: PoissonDisk
+biomes:
+  - name: biomes/Baator_Avernus/Muddy_Dirt_Dense
+    weight: 4
+    tags:
+      - LightBug
+      - PrickleFlower
+      - PrickleFlowerSeed
+      - PrickleGrass
+      - PrickleGrassSeed
+  - name: biomes/Baator_Avernus/Muddy_Algae_Dense
+    weight: 2
+    tags:   
+      - Hatch
+      - HatchBuried
+      - BasicForagePlant
+      - BasicForagePlantPlanted
+  - name: biomes/Baator_Avernus/Metal_Coal_Dense
+    weight: 1
+    tags:
+      - Hatch
+      - HatchBuried
+      - BasicForagePlant
+      - BasicForagePlantPlanted
+features:
+#  - type: features/baator/Baator_Avernus_waterwell
+  - type: features/baator/Baator_Avernus_geodemetal
+  - type: features/baator/Baator_Avernus_geodeclay
+  - type: features/baator/Baator_Avernus_gasbomb
+  - type: features/baator/Baator_Avernus_gasbomb
+zoneType: MagmaCore

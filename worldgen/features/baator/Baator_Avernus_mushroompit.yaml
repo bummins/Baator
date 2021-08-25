@@ -1,0 +1,78 @@
+tags:
+  - AllowExceedNodeBorders
+shape: Circle
+borders:
+  - 1
+  - 1
+  - 1
+blobSize:
+  min: 0.3
+  max: 2.1
+internalMobs:
+  - type: MushroomPlant
+    count:
+      min: 0
+      max: 3
+ElementChoiceGroups:
+  RoomCenterElements:
+    selectionMethod: WeightedResample
+    choices:
+      - element: CarbonDioxide
+        weight: 0.7
+        overrides:
+          massOverride: 9.3
+          temperatureOverride: 270
+  RoomBorderChoices0:
+    selectionMethod: WeightedResample
+    choices:
+      - element: CarbonDioxide
+        weight: 0.38
+        overrides:
+          massOverride: 19.3
+          temperatureOverride: 270
+      - element: SlimeMold
+        weight: 0.07
+        overrides:
+          temperatureOverride: 250
+          diseaseOverride: SlimeLung
+          diseaseAmountOverride: 400000
+  RoomBorderChoices1:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Algae
+        weight: 0.07
+        overrides:
+          temperatureOverride: 240
+      - element: SlimeMold
+        weight: 0.07
+        overrides:
+          temperatureOverride: 240
+          diseaseOverride: SlimeLung
+          diseaseAmountOverride: 400000
+      - element: Algae
+        weight: 0.07
+        overrides:
+          temperatureOverride: 240
+      - element: SlimeMold
+        weight: 0.07
+        overrides:
+          temperatureOverride: 240
+  RoomBorderChoices2:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Algae
+        weight: 0.07
+        overrides:
+          temperatureOverride: 220
+      - element: SlimeMold
+        weight: 0.07
+        overrides:
+          temperatureOverride: 220
+      - element: Algae
+        weight: 0.07
+        overrides:
+          temperatureOverride: 220
+      - element: SlimeMold
+        weight: 0.07
+        overrides:
+          temperatureOverride: 220

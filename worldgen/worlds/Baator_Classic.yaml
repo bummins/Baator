@@ -1,0 +1,225 @@
+name: STRINGS.WORLDS.BAATOR.NAME
+description: STRINGS.WORLDS.BAATOR.DESCRIPTION
+nameTable: TERRA
+asteroidIcon: asteroid_baator_kanim
+disableWorldTraits: true
+
+worldsize:
+  X: 192
+  Y: 224
+layoutMethod: PowerTree
+
+defaultsOverrides:
+  data:
+    DrawWorldBorder: true
+    DrawWorldBorderOverVacuum: false
+    WorldBorderThickness: 3
+    WorldBorderRange: 2
+    OverworldDensityMin: 20
+    OverworldDensityMax: 20
+    OverworldAvoidRadius: 10
+    OverworldSampleBehaviour: PoissonDisk
+    OverworldMinNodes: 1
+
+startSubworldName: expansion1::subworlds/baator/Baator_AvernusStart
+startingBaseTemplate:  expansion1::bases/swampBase
+
+seasons:
+  - MeteorShowers
+
+startingBasePositionHorizontal:
+  min: 0.5
+  max: 0.5
+startingBasePositionVertical:
+  min: 0.4
+  max: 0.4
+
+# List all the zone files to load
+subworldFiles:
+  - name: subworlds/space/Space
+  - name: expansion1::subworlds/baator/Baator_SurfaceCrags
+#  - name: expansion1::subworlds/space/HospitableSurface   
+#  - name: expansion1::subworlds/space/HospitableClassicSurface
+
+#  - name: expansion1::subworlds/baator/Baator_Big_Rust
+#  - name: expansion1::subworlds/baator/Baator_WarmForest
+
+  - name: expansion1::subworlds/baator/Baator_AvernusStart
+#  - name: expansion1::subworlds/baator/Baator_AvernusMini
+#  - name: expansion1::subworlds/baator/Baator_Avernus
+  - name: expansion1::subworlds/baator/Baator_Dis
+  - name: expansion1::subworlds/baator/Baator_Minauros
+  - name: expansion1::subworlds/baator/Baator_Phlegethos
+  - name: expansion1::subworlds/baator/Baator_Stygia
+  - name: expansion1::subworlds/baator/Baator_Malbolge
+  - name: expansion1::subworlds/baator/Baator_Maladomini
+  - name: expansion1::subworlds/baator/Baator_Cania
+  - name: expansion1::subworlds/baator/Baator_Nessus
+  - name: expansion1::subworlds/baator/Baator_LavaField
+#  - name: expansion1::subworlds/wasteland/WastelandBeetle
+#  - name: expansion1::subworlds/rust/med_Rust
+#  - name: expansion1::subworlds/swamp/SwampMini
+#  - name: expansion1::subworlds/jungle/med_JungleInactive
+#  - name: subworlds/frozen/Frozen
+#  - name: subworlds/marsh/HotMarsh
+#  - name: subworlds/jungle/Jungle
+#    minCount: 3
+#    maxCount: 3
+#    weight: 2
+unknownCellsAllowedSubworlds: 
+  - tagcommand: Default # Sides & surface
+    command: Replace
+    subworldNames:
+      - subworlds/space/Space
+  - tagcommand: DistanceFromTag
+    tag: AtStart
+    minDistance: 1
+    maxDistance: 99
+    command: Replace
+    subworldNames:
+#      - expansion1::subworlds/baator/Baator_WarmForest
+#      - subworlds/marsh/HotMarsh
+#      - expansion1::subworlds/jungle/med_JungleInactive
+#      - expansion1::subworlds/baator/Baator_Big_Rust
+#      - expansion1::subworlds/rust/med_Rust
+#      - expansion1::subworlds/wasteland/WastelandBeetle
+#      - expansion1::subworlds/baator/Baator_AvernusMini
+#      - expansion1::subworlds/baator/Baator_Avernus
+#      - expansion1::subworlds/baator/Baator_Dis   
+#      - expansion1::subworlds/baator/Baator_Minauros
+#      - expansion1::subworlds/baator/Baator_Phlegethos
+#      - expansion1::subworlds/baator/Baator_Stygia
+#      - expansion1::subworlds/baator/Baator_Malbolge
+#      - expansion1::subworlds/baator/Baator_Maladomini
+      - expansion1::subworlds/baator/Baator_Cania
+#      - expansion1::subworlds/baator/Baator_Nessus
+       
+#  - tagcommand: DistanceFromTag
+#    tag: AtStart
+#    minDistance: 1
+#    maxDistance: 2
+#    command: Replace
+#    subworldNames:
+#      - expansion1::subworlds/jungle/med_JungleInactive
+#      - expansion1::subworlds/baator/Baator_AvernusMini
+#      - expansion1::subworlds/swamp/SwampMini
+#      - expansion1::subworlds/baator/Baator_Minauros
+#      - subworlds/frozen/Frozen
+#  - tagcommand: DistanceFromTag # surface under space
+#    tag: AtSurface
+#    minDistance: 2 
+#    maxDistance: 2
+#    command: Replace
+#    subworldNames:
+#      - expansion1::subworlds/baator/Baator_SurfaceCrags
+#      - expansion1::subworlds/space/HospitableSurface   
+#     - expansion1::subworlds/space/HospitableClassicSurface
+#      - expansion1::subworlds/baator/Baator_Cania
+#      - subworlds/frozen/Frozen
+  - tagcommand: DistanceFromTag
+    tag: AtSurface
+    minDistance: 1
+    maxDistance: 1
+    command: Replace
+    subworldNames:
+      - expansion1::subworlds/baator/Baator_SurfaceCrags
+#      - expansion1::subworlds/baator/Baator_Cania
+  - tagcommand: AtTag
+    tag: AtSurface
+    command: Replace
+    subworldNames:
+      - subworlds/space/Space
+  - tagcommand: DistanceFromTag
+    tag: AtDepths
+    minDistance: 1
+    maxDistance: 1
+    command: Replace
+    subworldNames:
+      - expansion1::subworlds/baator/Baator_LavaField
+      - expansion1::subworlds/baator/Baator_Malbolge
+  - tagcommand: DistanceFromTag
+    tag: AtDepths
+    minDistance: 0
+    maxDistance: 0
+    command: Replace
+    subworldNames:
+      - expansion1::subworlds/baator/Baator_Phlegethos
+worldTemplateRules:
+  - names:
+      - expansion1::poi/genericGravitas/poi_office
+    listRule: GuaranteeAll
+    priority: 100
+    allowedCellsFilter:
+      - command: Replace
+        tagcommand: DistanceFromTag
+        tag: AtStart
+        minDistance: 2
+        maxDistance: 99
+      - command: ExceptWith
+        tagcommand: AtTag
+        tag: NoGravitasFeatures
+      - command: ExceptWith
+        tagcommand: DistanceFromTag
+        tag: AtDepths
+        minDistance: 0
+        maxDistance: 2
+      - command: ExceptWith
+        tagcommand: DistanceFromTag
+        tag: AtSurface
+        minDistance: 0
+        maxDistance: 2
+#  - names:
+#    - expansion1::poi/warp/sender
+#    - expansion1::poi/warp/receiver
+#    - expansion1::poi/warp/teleporter
+#    listRule: GuaranteeAll
+#    priority: 500
+#    allowedCellsFilter:
+#      - command: Replace
+#        tagcommand: DistanceFromTag
+#        tag: AtStart
+#        minDistance: 0
+#        maxDistance: 2
+##      - command: IntersectWith
+##        zoneTypes: [ Wasteland, FrozenWastes, ToxicJungle ]
+#      - command: ExceptWith
+#        tagcommand: AtTag
+#        tag: NoGravitasFeatures
+#  - names: # Generic geysers
+##    - geysers/chlorine_gas
+#    - geysers/hot_hydrogen
+#    - geysers/hot_steam
+#    listRule: TryAll
+##    someCount: 1
+#    priority: 10
+#    allowedCellsFilter:
+#      - command: Replace
+#        tagcommand: DistanceFromTag
+#        tag: AtStart
+#        minDistance: 3
+#        maxDistance: 10
+#      - command: ExceptWith
+#        zoneTypes: [ Space, MagmaCore ]
+#  - names:
+#    - expansion1::geysers/molten_cobalt
+#    - expansion1::geysers/molten_aluminum
+##    - expansion1::poi/poi_geyser_magma
+##    - geysers/small_volcano
+#    listRule: GuaranteeAll
+#    priority: 205
+#    allowedCellsFilter:
+#      - command: Replace
+#        tagcommand: DistanceFromTag
+#        tag: AtDepths
+#        minDistance: 0
+#        maxDistance: 1
+#  # Generic Geysers
+#  - names:
+#    - geysers/generic
+#    listRule: TryOne
+#    times: 12
+#    allowDuplicates: true
+#    allowedCellsFilter:
+#      - command: Replace
+#        tagcommand: NotAtTag
+#        tag: NoGlobalFeatureSpawning

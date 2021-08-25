@@ -1,0 +1,41 @@
+tags:
+  - AllowExceedNodeBorders
+shape: Splat
+borders:
+  - 2
+  - 2
+  - 2
+blobSize:
+  min: 1.5
+  max: 4
+ElementChoiceGroups:
+  RoomCenterElements:
+    selectionMethod: WeightedResample
+    choices:
+      - element: RockGas
+        weight: 1.0
+        overrides:
+          massOverride: 1200
+          temperatureOverride: 3000
+  RoomBorderChoices0:
+    selectionMethod: WeightedResample
+    choices:
+      - element: RockGas
+        weight: 0.8   
+        overrides:
+          massOverride: 1200
+          temperatureOverride: 3000
+      - element: Obsidian
+        weight: 0.2
+  RoomBorderChoices1:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Katairite
+        weight: 1.0
+  RoomBorderChoices2:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Katairite
+        weight: 0.9
+      - element: Magma
+        weight: 0.1

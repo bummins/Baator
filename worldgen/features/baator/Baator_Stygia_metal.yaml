@@ -1,0 +1,51 @@
+tags:
+  - AllowExceedNodeBorders
+shape: Circle
+borders:
+  - 1
+  - 1
+  - 1
+blobSize:
+  min: 1.5
+  max: 5
+ElementChoiceGroups:
+  RoomCenterElements:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Cuprite
+        weight: 2.2  
+        overrides:
+          massMultiplier: 6.0
+          temperatureOverride: 240
+  RoomBorderChoices0:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Cuprite
+        weight: 0.4   
+        overrides:
+          massMultiplier: 1.6
+          temperatureOverride: 240
+      - element: CrushedIce
+        weight: 0.8
+      - element: Ice
+        weight: 0.8      
+      - element: Salt
+        weight: 0.5
+  RoomBorderChoices1:
+    selectionMethod: WeightedResample
+    choices:
+      - element: CrushedIce
+        weight: 0.8
+      - element: Salt
+        weight: 0.8      
+      - element: Ice
+        weight: 0.8
+  RoomBorderChoices2:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Salt
+        weight: 0.8
+      - element: Ice
+        weight: 0.8      
+      - element: CrushedIce
+        weight: 0.8

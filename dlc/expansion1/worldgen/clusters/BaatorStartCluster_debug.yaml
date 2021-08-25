@@ -1,0 +1,18 @@
+#BaatorStartCluster: Spaced Out Debug Asteroid, NOT FOR ACTUAL GAMEPLAY
+name: STRINGS.CLUSTER_NAMES.BAATORDEBUG.NAME
+description: STRINGS.CLUSTER_NAMES.BAATORDEBUG.DESCRIPTION
+requiredDlcId: EXPANSION1_ID
+coordinatePrefix: BTOR-D
+
+menuOrder: -3
+clusterCategory: 2
+difficulty: 6
+
+startWorldIndex: 0
+numRings: 12
+worldPlacements:
+- world: expansion1::worlds/Baator_dlc_debug
+  buffer: 2
+  allowedRings:
+    min: 0
+    max: 0

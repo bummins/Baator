@@ -1,0 +1,37 @@
+biomeNoise: noise/Baator_LavaTube
+temperatureRange: HellHot
+pdWeight: 3.0
+minChildCount: 4
+density:
+  min: 35
+  max: 45
+avoidRadius: 50.0
+sampleBehaviour: PoissonDisk
+borderOverride: hardToDig
+biomes:
+  - name: biomes/Baator_Phlegethos/LavaTube
+    weight: 1
+#    overrides:
+#      massMultiplier: 500 #not supported
+subworldTemplateRules:
+  - names:
+    - geysers/small_volcano
+#    - expansion1::poi/poi_geyser_magma
+#    - expansion1::poi/poi_geyser_magma2
+#    - expansion1::poi/poi_geyser_magma3
+    listRule: TryOne
+    times: 4
+    allowDuplicates: true # be more flexible due to high temperature borders
+    priority: 500
+    allowExtremeTemperatureOverlap: true # ignore temperature differences on the surface
+tags:
+  - IgnoreCaveOverride
+  - NoGlobalFeatureSpawning #used to avoid worldgen pois
+  - ErodePointToBorder
+#pointsOfInterest:
+#  geysers_a:
+#    - geysers/small_volcano
+#  geysers_b:
+#    - geysers/small_volcano
+#    - expansion1::poi/poi_geyser_magma
+zoneType: MagmaCore

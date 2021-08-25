@@ -1,0 +1,21 @@
+tags:
+  - AllowExceedNodeBorders
+shape: Splat
+borders:
+blobSize:
+  min: 1
+  max: 4
+ElementChoiceGroups:
+  RoomCenterElements:
+    selectionMethod: PickOneWeighted
+    choices:
+      - element: Cuprite
+        weight: 150
+        overrides:
+          temperatureOverride: 307
+          massMultiplier: 24.1
+      - element: AluminumOre
+        weight: 150
+        overrides:
+          temperatureOverride: 315
+          massMultiplier: 13.4

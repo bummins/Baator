@@ -1,0 +1,40 @@
+tags:
+  - AllowExceedNodeBorders
+shape: Blob
+borders:
+  - 1
+  - 1
+blobSize:
+  min: 1.25
+  max: 1.75
+ElementChoiceGroups:
+  RoomCenterElements:
+    selectionMethod: WeightedResample
+    choices:
+      - element: NuclearWaste
+        weight: 0.2
+        overrides:
+          massOverride: 450
+          temperatureOverride: 383
+      - element: Syngas
+        weight: 0.1
+        overrides:
+          massMultiplier: 45.7
+  RoomBorderChoices0:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Syngas
+        weight: 0.1
+        overrides:
+          massMultiplier: 12.1
+      - element: Corium
+        weight: 0.2
+      - element: DepletedUranium
+        weight: 0.1
+  RoomBorderChoices1:
+    selectionMethod: WeightedResample
+    choices:
+      - element: DepletedUranium 
+        weight: 0.1
+      - element: Corium
+        weight: 0.2

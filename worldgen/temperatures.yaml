@@ -1,0 +1,10 @@
+# keys to remove from in-memory structure when this file is loaded
+remove: [] 
+# elements to add from in-memory structure when this file is loaded
+add:
+  CaniaCold:
+    min: 30
+    max: 60
+  HellHot:
+    min: 2400
+    max: 2600

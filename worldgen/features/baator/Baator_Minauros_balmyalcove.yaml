@@ -1,0 +1,66 @@
+tags:
+  - AllowExceedNodeBorders
+shape: ShortWide
+borders:
+  - 1
+  - 1
+  - 1
+internalMobs:
+ - type: BaatorLily
+   count:
+      min: 0
+      max: 3
+blobSize:
+  min: 5
+  max: 10
+ElementChoiceGroups:
+  RoomCenterElements:
+    selectionMethod: HorizontalSlice
+    choices:
+      - element: ChlorineGas
+        weight: 1.0
+        overrides:
+          massMultiplier: 6.6
+          temperatureOverride: 348
+  RoomBorderChoices0:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Mud
+        weight: 0.1
+        overrides:
+          massMultiplier: 12
+          temperatureOverride: 348
+      - element: SlimeMold
+        weight: 0.3
+        overrides:
+          diseaseOverride: SlimeLung
+          diseaseAmountOverride: 1000000
+          massMultiplier: 12
+          temperatureOverride: 348
+      - element: ChlorineGas
+        weight: 0.3
+  RoomBorderChoices1:
+    selectionMethod: WeightedResample
+    choices:
+      - element: SlimeMold
+        weight: 0.7
+        overrides:
+          diseaseOverride: SlimeLung
+          diseaseAmountOverride: 1000000
+          massMultiplier: 12
+          temperatureOverride: 348
+      - element: Mud
+        weight: 0.3
+        overrides:
+          massMultiplier: 12
+          temperatureOverride: 348
+  RoomBorderChoices2:
+    selectionMethod: WeightedResample
+    choices:
+      - element: ToxicMud
+        weight: 1
+        overrides:
+          diseaseOverride: SlimeLung
+          diseaseAmountOverride: 1000000
+          massMultiplier: 12
+          temperatureOverride: 348

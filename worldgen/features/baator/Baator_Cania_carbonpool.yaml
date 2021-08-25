@@ -1,0 +1,41 @@
+tags:
+  - AllowExceedNodeBorders
+shape: ShortWide
+borders:
+  - 1
+  - 1
+blobSize:
+  min: 2
+  max: 5.5
+ElementChoiceGroups:
+  RoomCenterElements:
+    selectionMethod: HorizontalSlice
+    choices:
+      - element: LiquidCarbonDioxide
+        weight: 0.6
+        overrides:
+          massOverride: 3600
+          temperatureOverride: 218
+      - element: ContaminatedOxygen
+        weight: 0.1
+        overrides:
+          massMultiplier: 2.4
+  RoomBorderChoices0:
+    selectionMethod: HorizontalSlice
+    choices:
+      - element: DirtyIce
+        weight: 0.3
+      - element: LiquidCarbonDioxide
+        weight: 0.6
+        overrides:
+          massOverride: 3600
+          temperatureOverride: 218
+  RoomBorderChoices1:
+    selectionMethod: HorizontalSlice
+    choices:
+      - element: BleachStone
+        weight: 0.1
+        overrides:
+          massMultiplier: 6.7
+      - element: DirtyIce
+        weight: 0.2

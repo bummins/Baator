@@ -1,0 +1,63 @@
+tags:
+  - AllowExceedNodeBorders
+shape: ShortWide
+borders:
+  - 1
+  - 1
+  - 1
+blobSize:
+  min: 5
+  max: 10
+ElementChoiceGroups:
+  RoomCenterElements:
+    selectionMethod: HorizontalSlice
+    choices:
+      - element: CarbonDioxide
+        weight: 0.4
+        overrides:
+          massOverride: 70
+          diseaseOverride: ZombieSpores
+          diseaseAmountOverride: 1000000
+          temperatureOverride: 640
+      - element: MoltenUranium
+        weight: 0.6
+        overrides:
+          massOverride: 960
+          temperatureOverride: 660
+  RoomBorderChoices0:
+    selectionMethod: WeightedResample
+    choices:
+      - element: SedimentaryRock
+        weight: 0.2
+        overrides:
+          massMultiplier: 12.2
+      - element: Obsidian
+        weight: 0.2
+        overrides:
+          massMultiplier: 8.3
+      - element: Corium
+        weight: 0.6
+        overrides:
+          massMultiplier: 6.8
+  RoomBorderChoices1:
+    selectionMethod: WeightedResample
+    choices:
+      - element: SedimentaryRock
+        weight: 0.2
+        overrides:
+          massMultiplier: 12.2
+      - element: Obsidian
+        weight: 0.2
+        overrides:
+          massMultiplier: 8.3
+      - element: Corium
+        weight: 0.6
+        overrides:
+          massMultiplier: 6.8
+  RoomBorderChoices1:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Corium
+        weight: 1.0
+        overrides:
+          massMultiplier: 6.8

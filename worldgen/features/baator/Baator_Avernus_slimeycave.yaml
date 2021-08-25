@@ -1,0 +1,85 @@
+tags:
+  - AllowExceedNodeBorders
+shape: Splat
+borders:
+  - 1
+  - 1
+  - 1
+blobSize:
+  min: 2
+  max: 6
+internalMobs:
+  - type: MushroomPlant
+    count:
+      min: 1
+      max: 4
+ElementChoiceGroups:
+  RoomCenterElements:
+    selectionMethod: WeightedResample
+    choices:
+      - element: CarbonDioxide
+        weight: 1
+        overrides:
+          temperatureOverride: 300
+          massMultiplier: 13.5
+      - element: Mud
+        weight: 0.4
+        overrides:
+          temperatureOverride: 290
+  RoomBorderChoices0:
+    selectionMethod: WeightedResample
+    choices:
+      - element: CarbonDioxide
+        weight: 0.38
+        overrides:
+          massOverride: 29.3
+          temperatureOverride: 330
+      - element: SlimeMold
+        weight: 0.07
+        overrides:
+          temperatureOverride: 300
+          diseaseOverride: SlimeLung
+          diseaseAmountOverride: 1200000
+  RoomBorderChoices1:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Algae
+        weight: 0.1
+        overrides:
+          temperatureOverride: 290
+      - element: SlimeMold
+        weight: 0.1
+        overrides:
+          temperatureOverride: 300
+          diseaseOverride: SlimeLung
+          diseaseAmountOverride: 1900000
+      - element: Algae
+        weight: 0.1
+        overrides:
+          temperatureOverride: 290
+      - element: SlimeMold
+        weight: 0.1
+        overrides:
+          temperatureOverride: 300
+  RoomBorderChoices2:
+    selectionMethod: PickOneWeighted
+    choices:
+      - element: Obsidian
+        weight: 150
+        overrides:
+          temperatureOverride: 300
+          massMultiplier: 1.3
+      - element: Carbon
+        weight: 150
+        overrides:
+          temperatureOverride: 300
+          massMultiplier: 3.8
+      - element: Sand
+        weight: 150
+        overrides:
+          temperatureOverride: 300
+      - element: SandStone
+        weight: 150
+        overrides:
+          temperatureOverride: 300
+          massMultiplier: 2.5

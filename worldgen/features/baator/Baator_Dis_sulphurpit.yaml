@@ -1,0 +1,66 @@
+tags:
+  - HighPriorityFeature
+  - AllowExceedNodeBorders
+shape: splat
+borders:
+  - 1
+  - 2
+  - 2
+  - 1
+blobSize:
+  min: 2
+  max: 4
+ElementChoiceGroups:
+  RoomCenterElements:
+    selectionMethod: WeightedResample
+    choices:
+      - element: SulfurGas
+        weight: 0.8  
+        overrides:
+          massMultiplier: 82.0
+          temperatureOverride: 1040
+      - element: LiquidSulfur
+        weight: 0.2   
+        overrides:
+          massMultiplier: 4.6
+          temperatureOverride: 609
+  RoomBorderChoices0:
+    selectionMethod: WeightedResample
+    choices:
+      - element: LiquidSulfur
+        weight: 2.5
+        overrides:
+          temperatureOverride: 605
+      - element: Katairite
+        weight: 0.5
+        overrides:
+          temperatureOverride: 609
+  RoomBorderChoices1:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Katairite
+        weight: 2.0 
+        overrides:
+          temperatureOverride: 480
+  RoomBorderChoices2:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Katairite
+        weight: 3.0  
+        overrides:
+          temperatureOverride: 390
+  RoomBorderChoices3:
+    selectionMethod: WeightedResample
+    choices:
+      - element: Rust
+        weight: 1.0  
+        overrides:
+          temperatureOverride: 330
+      - element: Ceramic
+        weight: 1.0  
+        overrides:
+          temperatureOverride: 330
+      - element: Sulfur
+        weight: 1.0  
+        overrides:
+          temperatureOverride: 330

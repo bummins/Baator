@@ -1,0 +1,13 @@
+# keys to remove from in-memory structure when this file is loaded
+remove: [] 
+# elements to add from in-memory structure when this file is loaded
+add:
+  Baator_Surface:
+    - element: Ice
+      weight: 0.7
+    - element: MaficRock
+      weight: 1
+    - element: Regolith
+      weight: 2
+    - element: Vacuum
+      weight: 0.3
